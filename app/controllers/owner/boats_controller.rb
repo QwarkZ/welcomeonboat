@@ -8,6 +8,7 @@ class Owner::BoatsController < ApplicationController
     # /owner/boats
     @boat = Boat.new(boat_params)
     @user = User.find(params[:id])
+    raise
     @boat.owner = @user
     @boat.save
     redirect_to boat_path(@boat)
