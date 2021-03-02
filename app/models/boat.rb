@@ -5,6 +5,6 @@ class Boat < ApplicationRecord
 
   validates :title, :category, :address, :price_per_day, :description, presence: true
 
-  CATEGORIES = ["Bateau à moteur", "Voilier"]
-  validates :categories, inclusion: { in: CATEGORIES }
+  CATEGORY = ["Bateau à moteur", "Voilier"]
+  validates :category, inclusion: { in: CATEGORY }
 end
