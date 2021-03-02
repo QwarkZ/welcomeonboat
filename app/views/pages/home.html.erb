@@ -1,16 +1,33 @@
 
 
-<div class="banner w-100" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1542397284385-6010376c5337?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80);">
+<div class="homepage-banner w-100" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1542397284385-6010376c5337?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80);">
   <div class="container">
     <h1>WELCOME ON BOAT</h1>
-    <p>Location de bateaux entre particuliers.</p>
+    <p>Partagez votre passion pour la mer, location de bateaux entre particuliers.</p>
   </div>
 </div>
 
-<div class="container">
-	<p>Partagez votre passion pour la mer : location de bateaux entre particuliers.</p>
-	<%= link_to "Découvrir Welcome en boat", new_user_registration_path, class: "btn btn-flat" %>
-	<%= link_to "Déjà inscrit ?", boats_path, class: "btn btn-false" %>
+<div class="container btn-container">
+	<p class="text-intro-hp">Trouvez un bateau ou un voilier à louer partout en France et au meilleur prix.</p>
+	<%= link_to "Découvrir Welcome en boat", new_user_registration_path, class: "btn btn-homepage" %>
+	<%= link_to "Déjà inscrit ?", boats_path, class: "btn btn-homepage-signin" %>
 </div>
+
+<div class="container reassurance">
+	<div class="row my-4">
+		<div class="col-12 col-md-6 col-lg-3">
+			<img width="55" height="55" alt="Meilleurs prix garantis" src="https://cdn.samboat.com/assets/current/public/assets/images/icons/80/homepage/advantage.svg"> 
+			<h4 class="my-4">Meilleurs prix garantis</h4> 
+			<p>Trouvez un bateau ou un voilier à louer partout en France et au meilleur prix</p>
+		</div> <div class="col-12 col-md-6 col-lg-3"><img width="55" height="55" alt="Assurances" src="https://cdn.samboat.com/assets/current/public/assets/images/icons/80/homepage/assurance.svg" data-loaded="true"> 
+			<h4 class="my-4">Assurances</h4> 
+			<p>Profitez de notre assurance incluse afin de louer et de naviguer en toute sécurité.</p></div> <div class="col-12 col-md-6 col-lg-3"><img width="55" height="55" alt="Tiers de confiance" src="https://cdn.samboat.com/assets/current/public/assets/images/icons/80/homepage/trust.svg" data-loaded="true"> 
+				<h4 class="my-4">Propriétaires</h4> 
+				<p>Créez gratuitement une annonce pour la location de votre bateau à d’autres particuliers.</p></div> <div class="col-12 col-md-6 col-lg-3"><img width="55" height="55" alt="A votre écoute" src="https://cdn.samboat.com/assets/current/public/assets/images/icons/80/homepage/client.svg" data-loaded="true"> 
+					<h4 class="my-4">À votre écoute</h4> 
+					<p>Une équipe d'experts pour vous accompagner 7j/7</p>
+				</div>
+			</div>
+		</div>
 
 <%= render 'shared/footer' %>

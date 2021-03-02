@@ -1,10 +1,10 @@
-.banner {
+.homepage-banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
 }
 
-.banner h1 {
+.homepage-banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-.banner p {
+.homepage-banner p {
   font-size: 20px;
   color: white;
   opacity: .7;
@@ -21,9 +21,18 @@
   text-align: center;
 }
 
-p {
+.text-intro-hp {
   color: #000000;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   margin-top: 15px;
+}
+
+.reassurance {
+  text-align: center
+}
+
+.reassurance h4 {
+  font-size: 14px;
+  font-weight: bold;
 }

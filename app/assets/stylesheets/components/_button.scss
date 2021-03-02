@@ -1,11 +1,11 @@
-.container {
+.btn-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
-.btn-flat {
+.btn-homepage {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
@@ -15,17 +15,22 @@
   text-decoration: none;
 }
 
-.btn-flat:hover {
+.btn-homepage:hover {
   background: #005F73;
   color: white;
 }
 
-.btn-false {
+.btn-homepage-signin {
+  padding: 8px 24px;
   color: #28527a;
   margin-top: 20px;
+  margin-bottom: 20px;
   text-decoration: none;
+  border: solid 1px #28527a;
+  border-radius: 4px;
+  width: 247px;
 }
 
-.btn-false:hover {
+.btn-homepage-signin:hover {
   color: #005F73;
 }
