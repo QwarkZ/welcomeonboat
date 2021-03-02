@@ -1,0 +1,27 @@
+<p><h1>Détail d'un bateau</h1>
+    <div class="card-boat">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-boat-infos">
+        <div>
+          <h2><%= @boat.title %></h2>
+          <p><%= @boat.description %></p>
+        </div>
+        <h2 class="card-boat-pricing">€ <%= @boat.price_per_day %></h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-boat-user avatar-bordered" />
+      </div>
+      <%= link_to "Ce bateau est magnifique, je le réserve de ce pas", new_boat_booking_path(@boat), class: "btn btn-flat" %>
+    </div>
+<p></p>
+<p></p>
+<p></p>
+<p>Autres variables disponibles :</p>
+<p>boat.owner.id : <%= @boat.owner_id %></p>
+<p>boat.category : <%= @boat.category %></p>
+<p>boat.address : <%= @boat.address %></p>
+<p>boat.owner.last_name : <%= @boat.owner.last_name %></p>
+<p>boat.owner.first_name : <%= @boat.owner.first_name %></p>
+<p>boat.owner.email : <%= @boat.owner.email %></p>
+
+
+<%= link_to 'Back', :back %>
+

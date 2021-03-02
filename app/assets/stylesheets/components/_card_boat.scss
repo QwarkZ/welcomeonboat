@@ -1,0 +1,39 @@
+.card-boat {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-boat > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-boat h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-boat p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-boat .card-boat-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-boat-infos .card-boat-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
