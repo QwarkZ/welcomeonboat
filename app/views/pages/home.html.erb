@@ -4,13 +4,16 @@
   <div class="container">
     <h1>WELCOME ON BOAT</h1>
     <p>Partagez votre passion pour la mer, location de bateaux entre particuliers.</p>
+    <div class="container btn-container">
+    <%= link_to "Découvrir Welcome en boat", new_user_registration_path, class: "btn btn-homepage" %>
+	<%= link_to "Déjà inscrit ?", boats_path, class: "btn btn-homepage-signin" %>
+	</div>
   </div>
 </div>
 
 <div class="container btn-container">
-	<p class="text-intro-hp">Trouvez un bateau ou un voilier à louer partout en France et au meilleur prix.</p>
-	<%= link_to "Découvrir Welcome en boat", new_user_registration_path, class: "btn btn-homepage" %>
-	<%= link_to "Déjà inscrit ?", boats_path, class: "btn btn-homepage-signin" %>
+
+	
 </div>
 
 <div class="container reassurance">
