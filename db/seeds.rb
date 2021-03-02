@@ -1,19 +1,9 @@
-require 'faker'
-
 puts "Adding Users"
-10.times do
-  User.create!(
-    {
-      first_name: Faker::Name.first_name ,
-      last_name: Faker::Name.last_name ,
-      email: Faker::Internet.email,
-      password: "azerty"
-    }
-  )
-end
+user_1 = User.create({first_name: "Guillaume", last_name: "FERCHAUD", email: "guillaume@example.com", password: "azerty"})
+user_2 = User.create({first_name: "Marion", last_name: "PETITPREZ", email: "marion@example.com", password: "azerty"})
+user_3 = User.create({first_name: "Lucrèce", last_name: "GUGELOT", email: "lucrece@example.com", password: "azerty"})
+user_4 = User.create({first_name: "Antoine", last_name: "GALPY", email: "antoine@example.com", password: "azerty"})
 puts "End of Adding Users"
-
-
 
 puts "Adding Boats"
 boat_1 = Boat.create({title: "JEANNEAU — SUN ODYSSEY 40.3 (2006)", description: "MAX V est un sun-odyssey,quillard GTE de 2006. Bateau rapide pour une carène de croisière et très marin, facile à barrer en équipage réduit: je le mène souvent seul et j'ai 73 ans!( cet été, nous sommes montés à Copenhague à deux) C'est un bateau très confortable: - trois cabines doubles - deux salles d'eau avec douche et wc -chauffe-eau électrique et fonctionnant avec le refroidissement du moteur. -réserves d'eau douce: 300 litres -réserve de gazoil: 140 litres Les voiles sont en bon état: La grand-voile est de 2014 Le genois sur enrouleur de 2013 Le spi, triradial est dans un état neuf Je pense que le tourmentin n'a jamais servi! pas avec moi toujours!!! Les plans de navigation au départ de Lorient: Vous pouvez bien sur envisager de suivre les nombreux 60 pieds et autres maxi-multis qui s'entrainent sur le plan d'eau....mais, plus modestement: L'ile de Groix est à 6 nautiques Belle-ile et le golfe du morbihan sont à 20 nautiques L'archipel des Glénans, les iles de Houat et Oedic sont à 25 Nautiques Vous pouvez également partir sur l'angleterre ou l'irlande ou la Galice qui sont à deux ou trois jours de mer de Lorient.( Pour les plus amarinés) Le bateau est équipé d'un logiciel de navigation sur PC et d'un AIS. Mais il peut être aussi très agréable de musarder le long de la côte sud du Finistère, entre Lorient et Penmarch, dans les jolies rias du Belon, de Roz-Bras, Concarneau, l'Odet, Loctudy Venez vous rendre compte que la Bretagne est bien plus agréable que la méditerranée pour naviguer et surtout plus économique et moins encombrée. A bientôt donc en Bretagne sud. On me demande de parler de moi:il n'y a pas grand'chose à dire: que je navigue depuis 60 ans,que Max est mon dixième bateau et que je suis un dingue de régate. C'est tout!", category: "Voilier", price_per_day: "150", address: "Kernével", owner_id: "1"})
@@ -27,3 +17,15 @@ boat_8 = Boat.create({title: "LAGOON — 420 (2008)", description: "Bateaux de p
 boat_9 = Boat.create({title: "LAGOON — MY40 (2015)", description: "Bonjour, Je vous propose à la location ce magnifique catamaran à moteur Lagoon MY 40 avec skipper au départ de toute la côte d'Azur et la Corse. Ce catamaran moteur de type Trawler, est idéal pour un séjour ou une sortie en famille ou entre amis. Il possède tous les avantages d'un catamaran voile, sans les contraintes, et tout le confort d'un yacht à moteur, sans le bruit et le coût du carburant. Ses grands espaces de vie spacieux et lumineux sont idéaux pour une croisière tout confort. Il possède 4 cabines avec salles de bains, wc privatives, et 2 cabines équipage. Vu à la télé dans l'émission de TF1 **** Option obligatoire **** - Skipper : 200€/jour **** Options facultatives **** - Hôtesse : 200€/jour - Linge de bain, de toilettes, de lit : 45€/cabine Si vous embarquez à Cannes, nous vous offrons le carburant pour la journée si vous naviguez autour des Iles de Lerins, là où Kevin notre capitaine connait les plus beaux spots pour se baigner, faire du snorkeling, ou du paddle (nous en avons un à bord). Vous pouvez amener à bord nourriture et boissons, Pour des déplacements hors locaux, pour les locations séjour, le carburant est facturé 30€/heure, mais un forfait peut vous être proposé en fonction de l'itinéraire prévu. N'hésitez pas à le contacter via la messagerie Click and Boat pour de plus amples informations. À bientôt !", category: "Voilier", price_per_day: "305", address: "Cannes", owner_id: "9"})
 puts "End of Adding Boats"
 
+
+puts "Adding Bookings"
+booking_1 = Booking.create({renter: user_1, boat: boat_9 ,start_date: Date.strptime('2021-02-01', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-05', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_2 = Booking.create({renter: user_2, boat: boat_8 ,start_date: Date.strptime('2021-02-02', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-06', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_3 = Booking.create({renter: user_3, boat: boat_7 ,start_date: Date.strptime('2021-02-03', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-07', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_4 = Booking.create({renter: user_2, boat: boat_6 ,start_date: Date.strptime('2021-02-04', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-08', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_5 = Booking.create({renter: user_1, boat: boat_5 ,start_date: Date.strptime('2021-02-05', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-09', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_6 = Booking.create({renter: user_2, boat: boat_4 ,start_date: Date.strptime('2021-02-06', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-10', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_7 = Booking.create({renter: user_3, boat: boat_3 ,start_date: Date.strptime('2021-02-07', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-11', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_8 = Booking.create({renter: user_2, boat: boat_2 ,start_date: Date.strptime('2021-02-08', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-12', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_9 = Booking.create({renter: user_1, boat: boat_1 ,start_date: Date.strptime('2021-02-09', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-13', '%Y-%m-%d') ,booking_status: "En attente"})
+puts "End of Adding Bookings"

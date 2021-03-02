@@ -1,0 +1,17 @@
+
+
+<% @boats.each do |boat| %>
+  <%= link_to boat_path(boat) do %>
+    <div class="card-boat">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-boat-infos">
+        <div>
+          <h2><%= boat.title %></h2>
+          <p><%= boat.description[0, 100] %></p>
+        </div>
+        <h2 class="card-boat-pricing"><%= boat.price_per_day %> €</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-boat-user avatar-bordered" />
+      </div>
+    </div>
+  <% end %>
+<% end %>
