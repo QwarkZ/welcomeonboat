@@ -1,0 +1,39 @@
+.booking.card {
+  width:100%;
+  margin:16px;
+  padding:12px 16px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  border:1px solid  rgba(0,0,0,0.7);
+  border-radius:8px;
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  * {
+    width:max-content;
+    margin:4px 0;
+  }
+}
+
+.relative {
+  position:relative;
+}
+
+.top-right {
+  position:absolute;
+  top:12px;
+  right:16px;
+}
+
+.owner {
+  font-size:1.25em;
+}
+
+.price {
+  color:#C81927;
+  font-size:1.5em;
+}
+
+.dates {
+  font-size:1.25em;
+  color:darkblue;
+}

@@ -1,4 +1,9 @@
-class BookingsController < ApplicationController
+class Renter::BookingsController < ApplicationController
+  def index
+    @current_user = User.find(current_user.id)
+    @bookings = Booking.all.where(renter_id: @current_user)
+  end
+
   def show
 
   end
