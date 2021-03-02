@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_7a6247e7-9fce-4c6a-80cc-be074e5a3fa8",
+      "org_id": "user_3ea56dea-4e82-4534-b9c9-3cd094f5f99b",
+      "deploy_url": "https://push-par-clevercloud-customers.services.clever-cloud.com/app_7a6247e7-9fce-4c6a-80cc-be074e5a3fa8.git",
+      "name": "welcomeonboat",
+      "alias": "welcomeonboat"
+    }
+  ]
+}
