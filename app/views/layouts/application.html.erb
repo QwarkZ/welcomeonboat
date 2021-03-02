@@ -3,6 +3,8 @@
   <head>
     <title>Welcomeonboat</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,7 +14,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body class="container">
+
     <%= yield %>
   </body>
 </html>
