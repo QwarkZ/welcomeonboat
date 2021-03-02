@@ -1,0 +1,18 @@
+form#new_boat {
+  height:max-content;
+  padding:2rem;
+  label {
+    width:20%;
+  }
+  input, select {
+    width:50%;
+  }
+  .form-group{
+    margin:auto;
+  }
+  input[type="submit"] {
+    width:33%;
+    margin:10px auto;
+  }
+}
+
