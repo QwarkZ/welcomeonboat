@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :boats , only: :show do
     resources :bookings, only: [:new, :create]
   end
-  resources :users, only: [:new, :create]
   namespace :owner do
     resources :boats , only: [:new, :create]
     resources :bookings, only: [:index, :update]
