@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #28527a;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.btn-flat:hover {
+  background: #005F73;
+  color: white;
+}
+
+.btn-false {
+  color: #28527a;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.btn-false:hover {
+  color: #005F73;
+}
