@@ -1,18 +1,12 @@
 class BoatsController < ApplicationController
-  def new
-    # /owner/boats/new
-    @user = User.find(5)
-    @boat.owner = @user
-    @boat = Boat.new
+  def index
+    @boats = Boat.all
   end
 
-  def create
-    # /owner/boats
-    @boat = Boat.new(boat_params)
-    @boat.save
-    redirect_to boat_path(@boat)
+  def show
+    @boat = Boat.find(params[:id])
   end
-
+  
   private
 
   def boat_params
