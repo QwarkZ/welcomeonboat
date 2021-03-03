@@ -1,28 +1,20 @@
 <div class="container">
-<p><h1>Détail d'un bateau</h1>
-    <div class="card-boat">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-boat-infos">
-        <div>
-          <h2><%= @boat.title %></h2>
-          <p><%= @boat.description %></p>
-        </div>
-        <h2 class="card-boat-pricing">€ <%= @boat.price_per_day %></h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-boat-user avatar-bordered" />
+  <div class="card-boat">
+    <%= cl_image_tag @boat.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class="card-boat-infos">
+      <div>
+        <h2><%= @boat.title %></h2>
+        <p><%= @boat.category %></p>
+        <p>📍<%= @boat.address %> |  <%= @boat.owner.first_name %> <%= @boat.owner.last_name %></p>
+        <br>
+        <p><%= @boat.description.truncate(800) %></p>
       </div>
-      <%= link_to "Ce bateau est magnifique, je le réserve de ce pas", new_boat_booking_path(@boat), class: "btn btn-flat" %>
+      <h2 class="card-boat-pricing pt-2">€ <%= @boat.price_per_day %></h2>
+      <%= cl_image_tag @boat.owner.photo.key, crop: :fill, class: "avatar card-boat-user avatar-bordered" %>  
     </div>
-<p></p>
-<p></p>
-<p></p>
-<p>Autres variables disponibles :</p>
-<p>boat.owner.id : <%= @boat.owner_id %></p>
-<p>boat.category : <%= @boat.category %></p>
-<p>boat.address : <%= @boat.address %></p>
-<p>boat.owner.last_name : <%= @boat.owner.last_name %></p>
-<p>boat.owner.first_name : <%= @boat.owner.first_name %></p>
-<p>boat.owner.email : <%= @boat.owner.email %></p>
-
-
-<%= link_to 'Back', :back %>
+    <div class="text-center">
+      <%= link_to "Je réserve", new_boat_booking_path(@boat), class: "btn btn-flat" %>
+    </div>
+    <%= link_to 'Back', :back, class: "pl-4" %>
+  </div>
 </div>

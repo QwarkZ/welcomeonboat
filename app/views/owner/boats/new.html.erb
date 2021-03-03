@@ -1,5 +1,6 @@
 <%= form_with model: [:owner, @boat], html: {class: "form form-control"}, method: :post do |f| %>
   <div class="form-group">
+    <%= f.input :photo, as: :file %>
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>

@@ -1,20 +1,20 @@
 <div class="container">
 
-  <h1>Bookings of <%= @current_user.first_name %></h1>
+  <h1>Demandes de réservation</h1>
+
 
   <% @bookings.each do |booking| %>
-  <div class="booking card relative">
-    <h3><%=booking.boat.title%></h3>
-    <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
-    <p class="owner">Renter : <%=booking.renter.first_name%></p>
-    <p class="dates">From <span class="from"><%=booking.start_date%></span> to <span class="to "><%=booking.end_date%></span></p>
-    <p class="status"><%=booking.booking_status%></p>
-    <div class="price top-right"><%=booking.boat.price_per_day%>€</div>
-    <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => booking.id}), method: :patch %> <%= link_to "Refuser", owner_booking_path({:booking_status => "Refusée", :id => booking.id}), method: :patch %>
-  </div>
+    <%= link_to owner_booking_path(booking) do %>
+      <div class="booking card relative">
+        <h3><%=booking.boat.title%></h3>
+        <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
+        <p class="owner">Renter : <%=booking.renter.first_name%></p>
+        <p class="dates">From <span class="from"><%=booking.start_date%></span> to <span class="to "><%=booking.end_date%></span></p>
+        <p class="status"><%=booking.booking_status%></p>
+        <div class="price top-right"><%=booking.boat.price_per_day%>€</div>
+        <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => booking.id}), method: :patch %> <%= link_to "Refuser", owner_booking_path({:booking_status => "Refusée", :id => booking.id}), method: :patch %>
+      </div>
+    <% end %>
   <% end %>
 
 </div>
-
-
-<%# STATUSES = ["En attente", "Validée", "Refusée"] %>
