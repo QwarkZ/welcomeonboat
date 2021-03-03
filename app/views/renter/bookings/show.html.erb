@@ -1,0 +1,13 @@
+<div class="show container">
+
+  <h1>Réservation pour <%= @booking.boat.title %></h1>
+
+  <div class="booking relative">
+    <h4><%=@booking.boat.category%> - <%=@booking.boat.address%></h4>
+    <p class="dates">From <span class="from"><%=@booking.start_date%></span> to <span class="to "><%=@booking.end_date%></span></p>
+    <p class="owner">Owner : <%=@booking.boat.owner%></p>
+    <p class="status"><%=@booking.booking_status%></p>
+    <div class="price top-right"><%=@booking.boat.price_per_day%>€</div>
+  </div>
+
+</div>
