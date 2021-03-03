@@ -8,7 +8,8 @@
         <h3><%=booking.boat.title%></h3>
         <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
         <p class="owner">Owner : <%=booking.boat.owner.first_name%></p>
-        <p class="dates">From <span class="from"><%=booking.start_date%></span> to <span class="to "><%=booking.end_date%></span></p>
+        <p class="dates">Du <span class="from"><%=booking.start_date.strftime("%d/%m/%Y")%></span> au <span class="to "><%=booking.end_date.strftime("%d/%m/%Y")%></span></p>
+        <p class="status"><%=booking.booking_status%></p>
         <div class="price top-right"><%=booking.boat.price_per_day%>€</div>
       </div>
     <% end %>
