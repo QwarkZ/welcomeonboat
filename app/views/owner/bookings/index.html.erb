@@ -1,11 +1,12 @@
-<div class="container">
+<div class="container bookings">
 
   <h1>Demandes de réservation</h1>
 
 
   <% @bookings.each do |booking| %>
-    <%= link_to owner_booking_path(booking) do %>
+
       <div class="booking card relative">
+      <%= link_to owner_booking_path(booking) do %>
         <h3><%=booking.boat.title%></h3>
         <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
         <p class="owner">Renter : <%=booking.renter.first_name%></p>
@@ -13,8 +14,9 @@
         <p class="status"><%=booking.booking_status%></p>
         <div class="price top-right"><%=booking.boat.price_per_day%>€</div>
         <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => booking.id}), method: :patch %> <%= link_to "Refuser", owner_booking_path({:booking_status => "Refusée", :id => booking.id}), method: :patch %>
+        <% end %>
       </div>
-    <% end %>
+
   <% end %>
 
 </div>
