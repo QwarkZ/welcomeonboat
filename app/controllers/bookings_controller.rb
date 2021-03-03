@@ -9,9 +9,31 @@ class BookingsController < ApplicationController
   end
 
   def create
+    puts "Avant NEW"
+    puts "Avant NEW"
+    puts "Avant NEW"
+    puts "Avant NEW"
+    puts "Avant NEW"
+    puts "Avant NEW"
+    puts "Avant NEW"
     @booking = Booking.new(booking_params)
+    puts "Après NEW et avant SAVE"
+    puts "Après NEW et avant SAVE"
+    puts "Après NEW et avant SAVE"
+    puts "Après NEW et avant SAVE"
+    puts "Après NEW et avant SAVE"
+    puts "Après NEW et avant SAVE"
     @booking.save
-    redirect_to renter_bookings_path(params[:id])
+    puts "Après SAVE"
+    puts "Après SAVE"
+    puts "Après SAVE"
+    puts "Après SAVE"
+    puts "Après SAVE"
+    puts "Après SAVE"
+    puts "Après SAVE"
+    puts "Après SAVE"
+    # redirect_to renter_bookings_path(params[:id])
+    redirect_to root_path
   end
 
   def edit
