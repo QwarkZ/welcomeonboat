@@ -1,0 +1,6 @@
+Réservation de : <%= @boat.title %>
+<%= simple_form_for [boat, booking] do |f| %>
+<%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+<%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+<%= f.button :submit, "Book me !", class: 'btn btn-flat' %>
+<% end %>

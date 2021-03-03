@@ -1,16 +1,17 @@
 class BookingsController < ApplicationController
   def show
-
+    @booking = Booking.find(params[:id])
   end
 
   def new
     @booking = Booking.new
+    @boat = Boat.find(params[:boat_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.save
-    redirect_to booking_path(@booking)
+    redirect_to renter_bookings_path(params[:id])
   end
 
   def edit
