@@ -3,13 +3,15 @@
   <h1>Bookings of <%= @current_user.first_name %></h1>
 
   <% @bookings.each do |booking| %>
-  <div class="booking card relative">
-    <h3><%=booking.boat.title%></h3>
-    <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
-    <p class="owner">Owner : <%=booking.boat.owner.first_name%></p>
-    <p class="dates">From <span class="from"><%=booking.start_date%></span> to <span class="to "><%=booking.end_date%></span></p>
-    <div class="price top-right"><%=booking.boat.price_per_day%>€</div>
-  </div>
+    <%= link_to renter_booking_path(booking) do %>
+      <div class="booking card relative">
+        <h3><%=booking.boat.title%></h3>
+        <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
+        <p class="owner">Owner : <%=booking.boat.owner.first_name%></p>
+        <p class="dates">From <span class="from"><%=booking.start_date%></span> to <span class="to "><%=booking.end_date%></span></p>
+        <div class="price top-right"><%=booking.boat.price_per_day%>€</div>
+      </div>
+    <% end %>
   <% end %>
 
 </div>
