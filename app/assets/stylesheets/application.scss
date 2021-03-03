@@ -27,3 +27,19 @@
   margin:0;
   text-decoration:none!important;
 }
+
+.relative {
+  position:relative;
+}
+
+.top-right {
+  position:absolute;
+  top:12px;
+  right:16px;
+}
+
+.bottom-right {
+  position:absolute;
+  bottom:12px;
+  right:16px;
+}
