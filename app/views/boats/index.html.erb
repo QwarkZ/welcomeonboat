@@ -3,7 +3,7 @@
 <% @boats.each do |boat| %>
   <%= link_to boat_path(boat) do %>
     <div class="card-boat">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <%= cl_image_tag boat.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-boat-infos">
         <div>
           <h2><%= boat.title %></h2>
