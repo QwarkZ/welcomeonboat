@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1>Bookings of <%= @current_user.first_name %></h1>
+  <h1>Vos réservations</h1>
 
   <% @bookings.each do |booking| %>
     <%= link_to renter_booking_path(booking) do %>
