@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   namespace :owner do
     resources :boats , only: [:new, :create]
-    resources :bookings, only: [:index, :update]
+    resources :bookings, only: [:index, :update, :show]
   end
   namespace :renter do
     resources :bookings, only: [:index, :update]

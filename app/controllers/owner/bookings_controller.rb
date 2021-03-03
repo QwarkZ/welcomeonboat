@@ -5,7 +5,7 @@ class Owner::BookingsController < ApplicationController
   end
 
   def show
-
+    @booking = Booking.find(params[:id])
   end
 
   def new
@@ -22,10 +22,12 @@ class Owner::BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def update
+  def update(options = {})
+    @status = params[:booking_status]
     @booking = Booking.find(params[:id])
-    @booking.update(booking_params)
-    redirect_to booking_path(@booking)
+    @booking.booking_status = @status
+    @booking.save
+    redirect_to owner_bookings_path
   end
 
   def destroy

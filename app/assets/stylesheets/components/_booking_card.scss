@@ -29,11 +29,12 @@
 }
 
 .price {
-  color:#C81927;
+  color:$red;
   font-size:1.5em;
+  font-weight:bold;
 }
 
 .dates {
   font-size:1.25em;
-  color:darkblue;
+  color:$blue;
 }
