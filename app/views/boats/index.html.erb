@@ -6,7 +6,7 @@
       <div class="card-boat-infos">
         <div>
           <h2><%= boat.title %></h2>
-          <p><%= boat.description[0, 100] %></p>
+          <p>📍<%= boat.address %></p>
         </div>
         <h2 class="card-boat-pricing pt-2"><%= boat.price_per_day %> €</h2>
         <%= cl_image_tag boat.owner.photo.key, crop: :fill, class: "avatar card-boat-user avatar-bordered" %>  
