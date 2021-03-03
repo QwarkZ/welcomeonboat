@@ -1,18 +1,20 @@
-<div class="container">
+<div class="container bookings">
 
   <h1>Vos réservations</h1>
 
   <% @bookings.each do |booking| %>
-    <%= link_to renter_booking_path(booking) do %>
+
       <div class="booking card relative">
+      <%= link_to renter_booking_path(booking) do %>
         <h3><%=booking.boat.title%></h3>
         <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
         <p class="owner">Owner : <%=booking.boat.owner.first_name%></p>
         <p class="dates">Du <span class="from"><%=booking.start_date.strftime("%d/%m/%Y")%></span> au <span class="to "><%=booking.end_date.strftime("%d/%m/%Y")%></span></p>
         <p class="status"><%=booking.booking_status%></p>
         <div class="price top-right"><%=booking.boat.price_per_day%>€</div>
+        <% end %>
       </div>
-    <% end %>
+
   <% end %>
 
 </div>
