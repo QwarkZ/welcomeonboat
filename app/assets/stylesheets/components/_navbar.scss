@@ -17,6 +17,11 @@
   cursor:pointer;
 }
 
+.nav-item:hover {
+  cursor:pointer;
+  opacity: 0.7;
+}
+
 .logo .fas {
   color: #28527a;
   font-size: 30px;
