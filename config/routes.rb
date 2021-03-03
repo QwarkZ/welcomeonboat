@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [:index, :update, :show]
   end
   namespace :renter do
-    resources :bookings, only: [:index, :update]
+    resources :bookings, only: [:index, :update, :show]
   end
 end
