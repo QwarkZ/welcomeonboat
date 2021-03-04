@@ -1,32 +1,18 @@
-// .blue {
-//   color: $orange !important;
-
-// }
-
-
-// .valided {
-//   font-color: $green;
-
-// }
-
-// .refused {
-//   font-color: $red;
-
-//   //font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f00d";
-// }
-
-
-// /*
-// * Design by Robert Mayer:https://goo.gl/CJ7yC8
-// *
-// *I intentionally left out the line that was supposed to be below the subheader simply because I don't like how it looks.
-// *
-// * Chronicle Display Roman font was substituted for similar fonts from Google Fonts.
-// */
-
 body {
   background-color: #f5f5f5;
 
+}
+
+.validated {
+  color: $green;
+}
+
+.refused {
+  color: $red;
+}
+
+.blue {
+  color: $orange !important;
 }
 
 .title-resa-owner {
@@ -72,6 +58,7 @@ body {
   height: 300px;
   width: 327px;
 }
+
 
 .product-text h1 {
   margin: 0 0 0 38px;

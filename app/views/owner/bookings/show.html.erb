@@ -9,13 +9,16 @@
     <p class="status"><%=@booking.booking_status%></p>
     <div class="price top-right"><%= ((@booking.end_date - @booking.start_date).to_i) * @booking.boat.price_per_day %>€</div>
 
-    <% if @booking.booking_status == "En attente" %>
-      <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => @booking.id}), method: :patch, :class => "booking-option bottom-right" %> <%= link_to "Refuser", owner_booking_path({:booking_status => "Refusée", :id => @booking.id}), method: :patch, :class => "booking-option bottom-right" %>
-    <% elsif @booking.booking_status == "Validée" %>
-       <%= link_to "Annuler la réservation", owner_booking_path({:booking_status => "Refusée", :id => @booking.id}), method: :patch, :class => "booking-option bottom-right" %>
-    <% else %>
-      <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => @booking.id}), method: :patch, :class => "booking-option bottom-right" %>
+    <div class="booking-options bottom-right">
+      <% if @booking.booking_status == "En attente" %>
+        <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => @booking.id}), method: :patch, :class => "booking-option validated" %> <%= link_to "Refuser", owner_booking_path({:booking_status => "Refusée", :id => @booking.id}), method: :patch, :class => "booking-option refused" %>
+      <% elsif @booking.booking_status == "Validée" %>
+        <%= link_to "Annuler la réservation", owner_booking_path({:booking_status => "Refusée", :id => @booking.id}), method: :patch, :class => "booking-option refused" %>
+      <% else %>
+        <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => @booking.id}), method: :patch, :class => "booking-option validated" %>
     <% end %>
+    </div>
+
   </div>
 
 </div>
