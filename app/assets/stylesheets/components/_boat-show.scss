@@ -24,7 +24,6 @@ height: 400px;
 background-size: contain;
 background-position: center;
 background-repeat: no-repeat;
-// 	background: blue;
 }
 
 .boat-name h2 {
@@ -46,7 +45,7 @@ background-repeat: no-repeat;
 	margin-top: 10px;
     margin-bottom: 10px;
     border-top: 1px solid #A2ABB5;
-    display-direction: column;
+    flex-direction: column;
     justify-content: flex-end;
 }
 
