@@ -1,34 +1,37 @@
 <div class="container-boat-show">
       <div class="row">
         <div class="col-12 col-lg-6">
-          <div>
-          <div class="img-boat-show">
-            <%= cl_image_tag @boat.photo.key, height: 300, width: 400, crop: :fill, class: "img"%>
+          <div class="brick1">
+            <div class="img-boat" style="background-image: url(<%= cl_image_path @boat.photo.key, crop: :scale %>);">
+            </div>
             <p><%= @boat.description.truncate(800) %></p>
-          </div>
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="container-description-show">
-            <h2><%= @boat.title %></h2>
-            <p>🛥<%= @boat.category %></p>
-            <p>📍<%= @boat.address %></p>
-            <p><%= cl_image_tag @boat.owner.photo.key, crop: :fill, class: "avatar" %> Proposé par <%= @boat.owner.first_name %> <%= @boat.owner.last_name %></p>
-              <h2><%= @boat.price_per_day %>€ / par jour</h2>
-          </div>
-          <div>
-            
-              
-          </div>
-        <div>
-          <%= link_to "Je réserve", new_boat_booking_path(@boat), class: "btn-homepage" %>
-        </div>
-        <div>
-          <%= link_to 'Continuer mes recherches', :back, class: "pl-4" %>
-        </div>
+          <div class="brick2">
+            <div class="small-description"></div>
+              <div class="boat-name">
+                <h2><%= @boat.title %></h2>
+              </div>
+              <div class="boat-category-adress">
+                <p>📍<%= @boat.address %></p>
+                <p class="category"><%= category(@boat.category) %> <%= @boat.category %></p>
+              </div>
+              <div class="info-owner">
+                <p> Proposé par <%= @boat.owner.first_name %> <%= @boat.owner.last_name %> <%= cl_image_tag @boat.owner.photo.key, crop: :fill, class: "avatar" %></p>
+                <p class="comment">Et répond en moins 1h</p>
+              </div>
+            <div class="formulaire-reservation">
+              <div class="container">
+              <h1>Nouvelle réservation</h1>
+              <%= render "bookings/form", booking: @booking, boat: @boat  %>
+              </div>
+            </div>
+
+
         </div>
       </div>
-  </div>
+    </div>
 </div>
 
 

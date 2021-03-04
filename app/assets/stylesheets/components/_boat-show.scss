@@ -1,25 +1,54 @@
 .container-boat-show {
 	background: white;
+}
+
+
+.brick1 {
+  margin-top: 30px;
+	margin-left: 80px;
+
+	p {
+		padding-top: 20px;
+		text-align: justify;
+	}
+}
+
+.brick2 {
+	margin-top: 20px;
+	background: pink;
+	margin-right: 10px;
+}
+
+.img-boat {
+height: 400px;
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+// 	background: blue;
+}
+
+.boat-name h2 {
+	font-size: 26px;
+}
+
+
+.boat-category-adress {
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+	align-item: start-flex;
 }
 
-.container-img {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.boat-category-adress .category {
+	margin-left: 30px;
 }
 
-.img-boat-show {
-	border: solid 1px black;
+.info-owner p {
+	margin: 0px;
+	padding: 0px
 }
 
-.img-boat-show img {
-	with: 514px;
-	height: 300px;
+.info-owner .comment {
+	opacity: 0.7;
 }
 
-.container-description-show h2 {
-	font-size: 24px;
-}
+
