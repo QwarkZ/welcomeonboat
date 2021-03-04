@@ -1,11 +1,11 @@
 import flatpickr from "flatpickr";
+import rangePlugin from 'flatpickr/dist/plugins/rangePlugin';
 
 const initFlatpickr = () => {
-  const options = {
-    mode: "range"
-  };
-};
-
+  flatpickr(".datepicker", {
+    "plugins": [new rangePlugin({ input: "#secondRangeInput" })]
+  });
+}
 
 export { initFlatpickr };
 
