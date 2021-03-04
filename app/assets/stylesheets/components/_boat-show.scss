@@ -5,7 +5,7 @@
 
 .brick1 {
   margin-top: 30px;
-	margin-left: 80px;
+	margin-left: 50px;
 
 	p {
 		padding-top: 20px;
@@ -15,8 +15,8 @@
 
 .brick2 {
 	margin-top: 20px;
-	background: pink;
-	margin-right: 10px;
+	background: white;
+	margin-right: 50px;
 }
 
 .img-boat {
@@ -42,13 +42,37 @@ background-repeat: no-repeat;
 	margin-left: 30px;
 }
 
-.info-owner p {
-	margin: 0px;
-	padding: 0px
+.separation {
+	margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid #A2ABB5;
+    display-direction: column;
+    justify-content: flex-end;
 }
 
-.info-owner .comment {
-	opacity: 0.7;
+.identity {
+		margin-top: 20px;
+		font-size: 16px;
+	}
+
+.comment {
+		margin-bottom: 20px;
+		font-size: 14px;
+		opacity: 0.7;
+		margin-left:45px;
+	}
+
+.formulaire-reservation {
+	margin-top: 40px;
 }
 
+.btn-show {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #28527a;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  font-size: 20px;
+}
 
