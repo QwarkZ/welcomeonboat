@@ -1,0 +1,25 @@
+.container-boat-show {
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-boat-show {
+	border: solid 1px black;
+}
+
+.img-boat-show img {
+	with: 514px;
+	height: 300px;
+}
+
+.container-description-show h2 {
+	font-size: 24px;
+}

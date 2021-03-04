@@ -1,17 +1,21 @@
 <div class="container">
+  <div class="cards">
 <% @boats.each do |boat| %>
   <%= link_to boat_path(boat) do %>
     <div class="card-boat">
       <%= cl_image_tag boat.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-boat-infos">
         <div>
-          <h2><%= boat.title %></h2>
           <p>📍<%= boat.address %></p>
+          <h2><%= boat.title %></h2>
         </div>
-        <h2 class="card-boat-pricing pt-2"><%= boat.price_per_day %> €</h2>
+        <h2 class="card-boat-pricing pt-2"><%= boat.price_per_day %> € <span>/ jour</span></h2>
         <%= cl_image_tag boat.owner.photo.key, crop: :fill, class: "avatar card-boat-user avatar-bordered" %>  
       </div>
     </div>
   <% end %>
 <% end %>
 </div>
+</div>
+
+
