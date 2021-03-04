@@ -1,16 +1,3 @@
-<p>Mes bateaux</p>
-<% @my_boats.each do |my_boat| %>
-  <p><%= my_boat.title %></p>
-<% end %>
-
-
-<p>Mes locations</p>
-<% @my_bookings.each do |my_booking| %>
-  <p>Réservation du <%= my_booking.boat.title %> du <%= my_booking.start_date %> au <%= my_booking.end_date %></p>
-<% end %>
-
-<p>Locations des gens</p>
-
-<% @people_rentings.each do |people_renting| %>
-<p>Réservation du <%= people_renting.boat.title %> du <%= people_renting.start_date %> au <%= people_renting.end_date %></p>
-<% end %>
+<%= render partial: "my_boats" %>
+<%= render partial: "my_bookings" %>
+<%= render partial: "people_rentings" %>
