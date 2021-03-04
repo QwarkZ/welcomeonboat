@@ -76,3 +76,8 @@ body > *:not(.navbar, .footer) {
   height:20px;
   line-height:20px;
 }
+
+button.tab .notif {
+  top:-10px;
+  right:-10px
+}
