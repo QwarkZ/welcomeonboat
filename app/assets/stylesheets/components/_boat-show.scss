@@ -13,6 +13,7 @@
 	}
 }
 
+
 .brick2 {
 	margin-top: 20px;
 	background: white;
@@ -73,6 +74,22 @@ background-repeat: no-repeat;
   background: #28527a;
   transition: background 0.3s ease;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 
+.btn-show:hover {
+  background: #005F73;
+  color: white;
+}
+
+.card-boat-pricing {
+	font-size: 20px;
+	font-weight: bolt;
+
+	span {
+	font-size: 16px;
+  font-weight: lighter;
+  opacity: .8;
+  margin: 0;
+	}
+}

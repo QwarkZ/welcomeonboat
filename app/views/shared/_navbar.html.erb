@@ -14,9 +14,6 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "⛵️ Mes réservations", renter_bookings_path, class: "nav-link" %>
-        </li>
         <li class="nav-item active relative">
           <%= link_to dashboard_index_path, class: "nav-link" do %>
             <span>📬 Mon tableau de bord</span>

@@ -1,26 +1,28 @@
+<div class="container">
 <%= simple_form_for [:owner, @boat], html: {class: "form form-control"}, method: :post do |f| %>
-  <div class="form-group">
-    <%= f.label :title %>
+  <div class="form-group form-control-lg">
+    <%= f.label "Titre de l'annonce" %>
     <%= f.text_field :title %>
   </div>
-  <div class="form-group">
-    <%= f.label :category %>
-    <%= f.select :category, ["Voilier", "Moteur"] %>
+  <div class="form-group form-control-lg">
+    <%= f.label "Catégorie" %>
+    <%= f.select :category, ["Sélectionner une catégorie", "⛵️ Voilier", "🛥 Bateau à Moteur"] %>
   </div>
-  <div class="form-group">
-    <%= f.label :address %>
+  <div class="form-group form-control-lg">
+    <%= f.label "Ville" %>
     <%= f.text_field :address %>
   </div>
-  <div class="form-group">
-    <%= f.label :price_per_day %>
+  <div class="form-group form-control-lg">
+    <%= f.label "Prix par jour" %>
     <%= f.text_field :price_per_day %>
   </div>
-  <div class="form-group">
-    <%= f.label :description %>
+  <div class="form-group form-control-lg">
+    <%= f.label "Description" %>
     <%= f.text_field :description %>
   </div>
-  <div class="form-group">
+  <div class="form-group form-control-lg">
     <%= f.input :photo, as: :file %>
-  </div>
-  <%= f.submit %>
+  </div class="btn btn-primary">
+  <button type="submit" class="btn btn-primary mt-5 ml-3">Je crée une annonce</button>
 <% end %>
+</div>
