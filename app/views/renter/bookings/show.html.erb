@@ -7,7 +7,7 @@
     <p class="dates">Du <span class="from"><%=@booking.start_date.strftime("%d/%m/%Y")%></span> au <span class="to "><%=@booking.end_date.strftime("%d/%m/%Y")%></span></p>
     <p class="owner">Owner : <%=@booking.boat.owner.first_name%></p>
     <p class="status"><%=@booking.booking_status%></p>
-    <div class="price top-right"><%=@booking.boat.price_per_day%>€</div>
+    <div class="price top-right"><%= ((@booking.end_date - @booking.start_date).to_i) * @booking.boat.price_per_day %>€</div>
   </div>
 
 </div>

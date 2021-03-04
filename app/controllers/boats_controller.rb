@@ -1,13 +1,13 @@
 class BoatsController < ApplicationController
   def index
-    @boats = Boat.all
+    @boats = Boat.where("owner_id != ?", current_user.id)
   end
 
   def show
     @boat = Boat.find(params[:id])
     @booking = Booking.new
   end
-  
+
   private
 
   def boat_params

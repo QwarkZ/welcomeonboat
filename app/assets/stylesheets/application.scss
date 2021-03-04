@@ -28,6 +28,19 @@
   text-decoration:none!important;
 }
 
+html, body {
+  min-height:100vh;
+}
+
+body {
+  display:flex;
+  flex-direction:column;
+}
+
+body > *:not(.navbar, .footer) {
+  flex-grow:2;
+}
+
 .relative {
   position:relative;
 }
@@ -42,4 +55,23 @@
   position:absolute;
   bottom:12px;
   right:16px;
+}
+
+.nav-link span {
+  position:relative;
+  z-index:10;
+}
+
+.pending {
+  position:absolute;
+  top:0;
+  right:-5px;
+  background-color:$red;
+  color:white;
+  text-align:center;
+  font-size:0.875em;
+  border-radius:50%;
+  width:20px;
+  height:20px;
+  line-height:20px;
 }
