@@ -4,37 +4,26 @@
   </div>
   <div class=new-div-resa>
   <% @bookings.each do |booking| %>
-
-
-
-  <div class="wrapper">
-    <div class="product-img">
-      <%= cl_image_tag booking.boat.photo.key, height: 300, width: 400, crop: :fill %>
-                <p class="status <%= status(booking.booking_status) %>"> <%= icon(booking.booking_status) %> <%= booking.booking_status %></p></p>
-
-      <p class="price-renter"><%=booking.boat.price_per_day%>€ / jour</p>
-    </div>
-    <div class="product-info">
-      <div class="product-text">
-        <h1><%=booking.boat.title%></h1>
-        <h2><%=booking.boat.category%> - 📍<%=booking.boat.address%></h2>
-                  <p id="owner-resa">Propriétaire du bateau : <%=booking.boat.owner.first_name%></p>
-
-        <p class="dates">Du
-              <span class="from"><%=booking.start_date.strftime("%d/%m/%Y")%></span> au
-              <span class="to "><%=booking.end_date.strftime("%d/%m/%Y")%></span>
-                      <p class="status-duration">Durée : <%=(booking.end_date - booking.start_date).to_i %> jours</p>
-                      <p><%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %> €</p>
-
+      <%= link_to renter_booking_path(booking) do %>
+        <div class="booking-card relative">
+          <div class="booking-img">
+              <%= cl_image_tag booking.boat.photo.key, height: 200, width: 300, crop: :fill %>
+              <div class="booking-avatar pl-2"> <%= cl_image_tag booking.boat.owner.photo.key, crop: :fill, class: "avatar" %> <span class="avatar-label">Proposé par <%= booking.boat.owner.first_name %> <%= booking.boat.owner.last_name %></span></div>
+          </div>
+          <div class="booking-info relative">
+            <h3 class="card-boat-infos"><%=booking.boat.title%></h3>
+            <h4 class="card-boat-infos"><%=booking.boat.category%> - 📍<%=booking.boat.address%></h4>
+            <p class="dates">Du
+              <span class="from"><%=booking.start_date.strftime("%d/%m/%y")%></span> au
+              <span class="to "><%=booking.end_date.strftime("%d/%m/%y")%></span>
+              (<%=(booking.end_date - booking.start_date).to_i %> jours)
             </p>
-        <p><%= link_to renter_booking_path(booking) do %>
-      </div>
-      <div class="product-price-btn">
 
+            <h4 class="card-boat-pricing pt-2"><%=booking.boat.price_per_day%>€ <span>/ jour</span></h4>
+            <p class="status <%= status(booking.booking_status) %>"> <%= icon(booking.booking_status) %> <%= booking.booking_status %></p>
+          </div>
+        </div>
       <% end %>
-      </div>
-    </div>
-  </div>
- <% end %>
+  <% end %>
 </div>
 </div>
