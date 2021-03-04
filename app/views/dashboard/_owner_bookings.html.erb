@@ -1,0 +1,20 @@
+<div class="container bookings dashboard-container active" id="dashboard-container-owner">
+
+  <h1>Demandes de réservation</h1>
+
+  <% @people_rentings.each do |booking| %>
+
+    <div class="booking card relative">
+      <%= link_to owner_booking_path(booking) do %>
+        <h3><%=booking.boat.title%></h3>
+        <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
+        <p class="dates">Du <span class="from"><%=booking.start_date.strftime("%d/%m/%Y")%></span> au <span class="to "><%=booking.end_date.strftime("%d/%m/%Y")%></span></p>
+        <p class="owner">Demande de <%=booking.renter.first_name%><%= cl_image_tag booking.renter.photo.key, height: 50, width: 50, crop: :fill %></p>
+        <p class="status"><%=booking.booking_status%></p>
+        <div class="price top-right"><%=booking.boat.price_per_day%>€</div>
+      <% end %>
+    </div>
+
+  <% end %>
+
+</div>
