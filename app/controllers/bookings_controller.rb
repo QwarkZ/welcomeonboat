@@ -9,19 +9,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-    puts booking_params
-    puts booking_params
-
     @booking = Booking.new(booking_params)
     @booking.boat_id = params[:boat_id]
     @booking.renter = current_user
-    puts @booking
-    puts @booking
-    puts @booking
-    puts @booking
-    puts @booking
-    puts @booking
-    puts @booking
     @booking.save
     redirect_to renter_bookings_path(@booking)
   end
