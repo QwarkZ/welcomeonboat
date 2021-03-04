@@ -26,8 +26,19 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  const boardButtons = document.querySelectorAll("#dashboard button.tab");
+  const boardContainers = document.querySelectorAll(".dashboard-container");
+  boardButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+      boardButtons.forEach(tabButton => tabButton.classList.remove("active"));
+      button.classList.add("active");
+      boardContainers.forEach(container => container.style.display = "none");
+      const ref = button.id.split("-")[2];
+      const boardId = "dashboard-container-" + ref;
+      const board = document.getElementById(boardId);
+      board.style.display = "block";
+    });
+  });
 });
 
 
@@ -35,3 +46,5 @@ document.addEventListener('turbolinks:load', () => {
 import { initFlatpickr } from "../plugins/flatpickr"
 
 initFlatpickr();
+
+
