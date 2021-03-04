@@ -1,0 +1,6 @@
+<div class="dashboard-container" id="dashboard-container-2">
+  <p>Mes locations</p>
+  <% @my_bookings.each do |my_booking| %>
+    <p>Réservation du <%= my_booking.boat.title %> du <%= my_booking.start_date %> au <%= my_booking.end_date %></p>
+  <% end %>
+</div>

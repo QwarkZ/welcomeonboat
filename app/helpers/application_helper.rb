@@ -1,10 +1,7 @@
 module ApplicationHelper
-
   def status(booking)
     if booking == "En attente"
       "blue"
-
-
     elsif booking == "Validée"
       "valided"
     else
@@ -12,9 +9,7 @@ module ApplicationHelper
     end
   end
 
-
-
-def icon(booking)
+  def icon(booking)
     if booking == "En attente"
       "⏰"
 
@@ -24,5 +19,14 @@ def icon(booking)
       "❌"
     end
   end
+  
+	def category(boat)
+    if boat == "Voilier"
+     	"⛵️"
+    else
+     	"🛥"
+    end
+	end
+
 end
 

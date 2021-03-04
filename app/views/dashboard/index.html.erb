@@ -1,0 +1,12 @@
+<div class="container" id="dashboard">
+  <div class="tabs">
+    <button class="tab active" id="dashboard-btn-1">Mes locations</button>
+    <button class="tab" id="dashboard-btn-2">Mes demandes de réservation</button>
+    <button class="tab" id="dashboard-btn-3">Mes bateaux</button>
+  </div>
+  <div id="dashboard-content">
+    <%= render partial: "people_rentings" %>
+    <%= render partial: "my_bookings" %>
+    <%= render partial: "my_boats" %>
+  </div>
+</div>

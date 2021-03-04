@@ -17,13 +17,18 @@
         <li class="nav-item active">
           <%= link_to "⛵️ Mes réservations", renter_bookings_path, class: "nav-link" %>
         </li>
-        <li class="nav-item active">
-          <%= link_to " 📬 Mon tableau de bord", owner_bookings_path, class: "nav-link" %>
+        <li class="nav-item active relative">
+          <%= link_to dashboard_index_path, class: "nav-link" do %>
+            <span>📬 Mon tableau de bord</span>
+            <% if pending_count != 0 %>
+              <i class="pending"><%= pending_count %></i>
+            <% end %>
+          <% end %>
         </li>
         <li class="nav-item active">
           <%= link_to "👋 Déconnexion", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
-        <li class="nav-item"> 
+        <li class="nav-item">
         </li>
       <% else %>
         <li class="nav-item navbar-collapse">
