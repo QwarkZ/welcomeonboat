@@ -1,21 +1,34 @@
-<div class="container bookings">
-
+<div class="container">
   <h1>Vos réservations</h1>
-
+  
   <% @bookings.each do |booking| %>
 
       <div class="booking card relative">
-      <%= link_to renter_booking_path(booking) do %>
-        <h3><%=booking.boat.title%></h3>
-        <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
-        <p class="owner">Owner : <%=booking.boat.owner.first_name%></p>
-        <p class="dates">Du <span class="from"><%=booking.start_date.strftime("%d/%m/%Y")%></span> au <span class="to "><%=booking.end_date.strftime("%d/%m/%Y")%></span></p>
-        <p class="status"><%=booking.booking_status%></p>
-        <div class="price top-right"><%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</div>
-        <p class="status">Durée : <%=(booking.end_date - booking.start_date).to_i %> jours</p>
+        <div>
+          <h3 class="card-boat-infos"><%=booking.boat.title%></h3>
+          <p>
+            <h4 class="card-boat-infos"><%=booking.boat.category%> - 📍<%=booking.boat.address%></h4>
+            <p class="dates">Du 
+              <span class="from"><%=booking.start_date.strftime("%d/%m/%Y")%></span> au 
+              <span class="to "><%=booking.end_date.strftime("%d/%m/%Y")%></span>
+            </p>
+          </p>
+          <div class="booking card resa-img">
+            <%= cl_image_tag booking.boat.photo.key, height: 300, width: 400, crop: :fill %>
+          </div>
+        </div>
+        <%= link_to renter_booking_path(booking) do %>
+          <p class="owner">Propriétaire du bateau : <%=booking.boat.owner.first_name%></p>
+          <p class="status <%= status(booking.booking_status) %>"> <%= icon(booking.booking_status) %> <%= booking.booking_status %></p>
+
+          <div>
+            <h2 class="card-boat-pricing pt-2"><%=booking.boat.price_per_day%>€ <span>/ jour</span></h2>
+          </div>
+          <p class="status">Durée : <%=(booking.end_date - booking.start_date).to_i %> jours</p>
         <% end %>
       </div>
 
   <% end %>
 
 </div>
+
