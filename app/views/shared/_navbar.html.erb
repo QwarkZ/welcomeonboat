@@ -18,7 +18,7 @@
           <%= link_to "⛵️ Mes réservations", renter_bookings_path, class: "nav-link" %>
         </li>
         <li class="nav-item active relative">
-          <%= link_to owner_bookings_path, class: "nav-link" do %>
+          <%= link_to dashboard_index_path, class: "nav-link" do %>
             <span>📬 Mon tableau de bord</span>
             <% if pending_count != 0 %>
               <i class="pending"><%= pending_count %></i>
