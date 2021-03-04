@@ -2,20 +2,18 @@
 
   <h1>Demandes de réservation</h1>
 
-
   <% @bookings.each do |booking| %>
 
-      <div class="booking card relative">
+    <div class="booking card relative">
       <%= link_to owner_booking_path(booking) do %>
         <h3><%=booking.boat.title%></h3>
         <h4><%=booking.boat.category%> - <%=booking.boat.address%></h4>
-        <p class="owner">Renter : <%=booking.renter.first_name%></p>
-        <p class="dates">From <span class="from"><%=booking.start_date%></span> to <span class="to "><%=booking.end_date%></span></p>
+        <p class="dates">Du <span class="from"><%=booking.start_date.strftime("%d/%m/%Y")%></span> au <span class="to "><%=booking.end_date.strftime("%d/%m/%Y")%></span></p>
+        <p class="owner">Demande de <%=booking.renter.first_name%><%= cl_image_tag booking.renter.photo.key, height: 50, width: 50, crop: :fill %></p>
         <p class="status"><%=booking.booking_status%></p>
         <div class="price top-right"><%=booking.boat.price_per_day%>€</div>
-        <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => booking.id}), method: :patch %> <%= link_to "Refuser", owner_booking_path({:booking_status => "Refusée", :id => booking.id}), method: :patch %>
-        <% end %>
-      </div>
+
+    </div>
 
   <% end %>
 
