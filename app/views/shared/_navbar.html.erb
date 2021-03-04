@@ -19,8 +19,10 @@
         </li>
         <li class="nav-item active relative">
           <%= link_to owner_bookings_path, class: "nav-link" do %>
-          <span>📬 Mon tableau de bord</span>
-          <i class="pending"><%= pending_count %></i>
+            <span>📬 Mon tableau de bord</span>
+            <% if pending_count != 0 %>
+              <i class="pending"><%= pending_count %></i>
+            <% end %>
           <% end %>
         </li>
         <li class="nav-item active">
