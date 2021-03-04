@@ -8,6 +8,8 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import { initFlatpickr } from "../plugins/flatpickr"
+
 
 Rails.start()
 Turbolinks.start()
@@ -26,6 +28,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
+  initFlatpickr();
   const boardButtons = document.querySelectorAll("#dashboard button.tab");
   const boardContainers = document.querySelectorAll(".dashboard-container");
   boardButtons.forEach((button) => {
@@ -43,8 +46,6 @@ document.addEventListener('turbolinks:load', () => {
 
 
 // Ajout de datapickr
-import { initFlatpickr } from "../plugins/flatpickr"
 
-initFlatpickr();
 
 
