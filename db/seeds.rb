@@ -253,13 +253,11 @@ puts "End of Adding Boats"
 
 
 puts "Adding Bookings"
-booking_1 = Booking.create({renter: user_1, boat: boat_9 ,start_date: Date.strptime('2021-02-01', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-05', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_2 = Booking.create({renter: user_2, boat: boat_8 ,start_date: Date.strptime('2021-02-02', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-06', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_3 = Booking.create({renter: user_3, boat: boat_7 ,start_date: Date.strptime('2021-02-03', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-07', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_4 = Booking.create({renter: user_2, boat: boat_6 ,start_date: Date.strptime('2021-02-04', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-08', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_5 = Booking.create({renter: user_1, boat: boat_5 ,start_date: Date.strptime('2021-02-05', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-09', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_6 = Booking.create({renter: user_2, boat: boat_4 ,start_date: Date.strptime('2021-02-06', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-10', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_7 = Booking.create({renter: user_3, boat: boat_3 ,start_date: Date.strptime('2021-02-07', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-11', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_8 = Booking.create({renter: user_2, boat: boat_2 ,start_date: Date.strptime('2021-02-08', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-12', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_9 = Booking.create({renter: user_1, boat: boat_1 ,start_date: Date.strptime('2021-02-09', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-13', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_1 = Booking.create({renter: user_1, boat: boat_9 ,start_date: Date.strptime('2020-09-01', '%Y-%m-%d') ,end_date: Date.strptime('2020-09-02', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_2 = Booking.create({renter: user_2, boat: boat_8 ,start_date: Date.strptime('2020-08-15', '%Y-%m-%d') ,end_date: Date.strptime('2020-08-16', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_5 = Booking.create({renter: user_1, boat: boat_5 ,start_date: Date.strptime('2020-08-05', '%Y-%m-%d') ,end_date: Date.strptime('2020-08-09', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_6 = Booking.create({renter: user_2, boat: boat_4 ,start_date: Date.strptime('2020-05-06', '%Y-%m-%d') ,end_date: Date.strptime('2020-05-10', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_7 = Booking.create({renter: user_3, boat: boat_3 ,start_date: Date.strptime('2019-07-07', '%Y-%m-%d') ,end_date: Date.strptime('2019-07-08', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_8 = Booking.create({renter: user_2, boat: boat_2 ,start_date: Date.strptime('2018-08-08', '%Y-%m-%d') ,end_date: Date.strptime('2018-08-10', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_9 = Booking.create({renter: user_1, boat: boat_1 ,start_date: Date.strptime('2017-06-09', '%Y-%m-%d') ,end_date: Date.strptime('2017-06-10', '%Y-%m-%d') ,booking_status: "En attente"})
 puts "End of Adding Bookings"
