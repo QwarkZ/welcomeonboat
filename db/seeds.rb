@@ -218,7 +218,7 @@ boat_13.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file = File.open(Rails.root.join("db", "seeds", "images", "bateau14.jpg"))
 boat_14 = Boat.create(
-  title: "LE WAGON DE PIERRE - VERSILCRAFT — 31M (1988)",
+  title: "LE WAGON DE PIERRE — 31M (1988)",
   description: "36 invités · 4 cabines · 10 couchages · 4 salles de bain. Nous vous proposons à la location avec Capitaine Pierre, 2 marin et 1 steward notre merveilleux Versilcraft, disponible au départ de Cannes ou d'autres ports en mer Méditerranée.La capacité d'accueil à bord est de 36 personnes en journée et de 10 personnes la nuit.. C'est un voilier qui démarre dans un petit souffle de vent et qui supporte le vent fort. Possibilité de dormir à bord la veille au soir. Navigation : Vers l'Ouest, les calanques de Cassis, Marseille... et vers l'Est, les Iles d'Or, St Tropez... Vous trouverez à Saint-Mandrier des commerces. Un marché se tient tous les samedis matin. En arrivant en voiture, parking gratuit à côté du port. En train, gare de Toulon, puis prendre au port une navette à passagers (ligne 28M - 20mn de traversée).",
   category: "Bateau à moteur",
   price_per_day: "7000",
