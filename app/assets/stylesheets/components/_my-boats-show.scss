@@ -6,6 +6,21 @@
   grid-gap: 16px;
 }
 
+.btn-add-boat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #EB5855;
+  transition: background 0.3s ease;
+  margin-top: 50px;
+  text-decoration: none;
+}
+
+.btn-add-boat:hover {
+  background: #EB5855;
+  color: white;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
@@ -41,17 +56,6 @@
   }
 }
 
-.btn-add-boat {
-  padding: 8px 24px;
-  color: #28527a;
-  margin-top: 20px;
-  text-decoration: none;
-  border: solid 1px #28527a;
-  border-radius: 4px;
-  width: 248px;
-  background: white;
-}
 
-.btn-add-boat:hover {
-  color: #005F73;
-}
+
+

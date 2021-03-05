@@ -18,11 +18,11 @@
                 <p class="category"><%= category(@boat.category) %> <%= @boat.category %></p>
               </div>
               <div>
-                <p class="card-boat-pricing-show pl-2">💶 <%= @boat.price_per_day %> € <span>/ jour</span></p>
+                <p class="card-boat-pricing-show pl-2">💰 <%= @boat.price_per_day %> € <span>/ jour</span></p>
               </div>
               <div class="separation info-owner">
-                <div class="identity pl-2"> <%= cl_image_tag @boat.owner.photo.key, crop: :fill, class: "avatar" %> Proposé par <%= @boat.owner.first_name %></div>
-                <div class="comment pl-2">Répond en moins de <%= rand(1..5) %>h</div>
+                <div class="identity pl-2"> <%= cl_image_tag @boat.owner.photo.key, crop: :fill, class: "avatar" %> Proposé par <%= @boat.owner.first_name %><span class="comment pl-2">⏰ Répond en moins de <%= rand(1..5) %>h</span></div>
+    
               </div>
             <div class="formulaire-reservation separation">
               <div class="container mt-4">
@@ -33,7 +33,7 @@
               </div>
               <div class="d-flex justify-content-end">
 
-              <%= link_to "Continuer mes recherches", boats_path, class: "btn btn-homepage-signin mt-4 mb-4" %>
+              <%= link_to "Continuer mes recherches", boats_path, class: "btn btn-show-continue mt-4 mb-4" %>
               </div>
             </div>  
         </div>

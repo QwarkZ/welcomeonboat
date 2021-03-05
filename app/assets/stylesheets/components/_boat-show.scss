@@ -51,19 +51,19 @@ background-repeat: no-repeat;
 }
 
 .identity {
-		margin-top: 20px;
-		font-size: 16px;
+	margin-top: 20px;
+	font-size: 16px;
 	}
 
 .comment {
-		margin-bottom: 20px;
-		font-size: 14px;
-		opacity: 0.7;
-		margin-left:45px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	opacity: 0.7;
+	margin-left:45px;
 	}
 
 .formulaire-reservation {
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 .btn-show {
@@ -91,4 +91,20 @@ background-repeat: no-repeat;
   opacity: .8;
   margin: 0;
 	}
+}
+
+
+.btn-show-continue {
+  padding: 8px 24px;
+  color: #28527a;
+  margin-top: 20px;
+  text-decoration: none;
+  border: solid 1px #28527a;
+  border-radius: 4px;
+  width: 248px;
+  background: white;
+}
+
+.btn-show-continue:hover {
+  color: #005F73;
 }
