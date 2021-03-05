@@ -8,7 +8,7 @@
         <div class="booking-card relative">
           <div class="booking-img">
               <%= cl_image_tag booking.boat.photo.key, height: 200, width: 300, crop: :fill %>
-              <div class="booking-avatar pl-2"> <%= cl_image_tag booking.boat.owner.photo.key, crop: :fill, class: "avatar" %> <span class="avatar-label">Proposé par <%= booking.boat.owner.first_name %> <%= booking.boat.owner.last_name %></span></div>
+              <div class="booking-avatar pl-2"> <%= cl_image_tag booking.boat.owner.photo.key, crop: :fill, class: "avatar" %> <span class="avatar-label">Proposé par <%= booking.boat.owner.first_name %> </span></div>
           </div>
           <div class="booking-info relative">
             <h3 class="card-boat-infos"><%=booking.boat.title%></h3>
@@ -35,7 +35,7 @@
           <div class="booking-card relative">
             <div class="booking-img">
                 <%= cl_image_tag booking.boat.photo.key, height: 200, width: 300, crop: :fill %>
-                <div class="booking-avatar pl-2"> <%= cl_image_tag booking.boat.owner.photo.key, crop: :fill, class: "avatar" %> <span class="avatar-label">Proposé par <%= booking.boat.owner.first_name %> <%= booking.boat.owner.last_name %></span></div>
+                <div class="booking-avatar pl-2"> <%= cl_image_tag booking.boat.owner.photo.key, crop: :fill, class: "avatar" %> <span class="avatar-label">Proposé par <%= booking.boat.owner.first_name %> </span></div>
             </div>
             <div class="booking-info relative">
               <h3 class="card-boat-infos"><%=booking.boat.title%></h3>
@@ -62,7 +62,7 @@
         <div class="booking-card relative">
           <div class="booking-img">
               <%= cl_image_tag booking.boat.photo.key, height: 200, width: 300, crop: :fill %>
-              <div class="booking-avatar pl-2"> <%= cl_image_tag booking.boat.owner.photo.key, crop: :fill, class: "avatar" %> <span class="avatar-label">Proposé par <%= booking.boat.owner.first_name %> <%= booking.boat.owner.last_name %></span></div>
+              <div class="booking-avatar pl-2"> <%= cl_image_tag booking.boat.owner.photo.key, crop: :fill, class: "avatar" %> <span class="avatar-label">Proposé par <%= booking.boat.owner.first_name %></span></div>
           </div>
           <div class="booking-info relative">
             <h3 class="card-boat-infos"><%=booking.boat.title%></h3>
