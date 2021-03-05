@@ -6,7 +6,8 @@ import { French } from "flatpickr/dist/l10n/fr.js";
 const initFlatpickr = () => {
   flatpickr(".datepicker", {
     "plugins": [new rangePlugin({ input: "#secondRangeInput" })],
-    "locale": French
+    "locale": French,
+    minDate: "today"
   });
 }
 
