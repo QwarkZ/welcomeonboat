@@ -32,6 +32,9 @@
   </div>
 
   <div class="future-bookings">
+    <% if @future_people_rentings.length != 0 %>
+      <h2>Confirmées</h2>
+    <% end %>
     <% @future_people_rentings.each do |booking| %>
     <%= link_to owner_booking_path(booking) do %>
         <div class="booking-card relative">
@@ -58,9 +61,7 @@
   </div>
 
   <div class="other-bookings">
-    <% if @future_people_rentings.length != 0 %>
-      <h2>En attente</h2>
-  <% end %>
+
 
 
   <% if @other_people_rentings.length != 0 %>
