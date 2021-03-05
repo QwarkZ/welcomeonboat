@@ -9,7 +9,7 @@ class Owner::BoatsController < ApplicationController
     @user = User.find(current_user.id)
     @boat.owner = @user
     if @boat.save
-      redirect_to boat_path(@boat)
+      redirect_to dashboard_index_path
     else
       render :new
     end
