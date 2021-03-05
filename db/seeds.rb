@@ -1,4 +1,3 @@
-
 require "open-uri"
 
 puts "Cleaning Database"
@@ -40,11 +39,20 @@ user_6.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 file = File.open(Rails.root.join("db", "seeds", "images", "Omar.jpg"))
 user_7 = User.create({first_name: "Omar", last_name: "Sy", email: "omar@example.com", password: "azerty"})
 user_7.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-puts "End of Adding Users"
+
 
 file = File.open(Rails.root.join("db", "seeds", "images", "François.jpeg"))
 user_8 = User.create({first_name: "François", last_name: "Retif", email: "francois@example.com", password: "azerty"})
 user_8.photo.attach(io: file, filename: 'nes.jpeg', content_type: 'image/jpeg')
+
+
+file = File.open(Rails.root.join("db", "seeds", "images", "Yann.jpg"))
+user_9 = User.create({first_name: "Yann", last_name: "Barth", email: "yann@example.com", password: "azerty"})
+user_9.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file = File.open(Rails.root.join("db", "seeds", "images", "Laure.jpg"))
+user_10 = User.create({first_name: "Laure", last_name: "Dupont", email: "laure@example.com", password: "azerty"})
+user_10.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 puts "End of Adding Users"
 
 puts "Adding Boats with photos"
@@ -101,7 +109,7 @@ boat_5 = Boat.create(
 	description: "6 personnes. Je loue mon quicksilver active 675 de 8 personnes. Le bateau est sur remorque, disponible sur le lac de Parentis 3500 ha ( pêche .promenade .activités nautique, compris dans la location la vignette navigation sur le lac et la place au port il possède un taud , un sondeur , suport de cannes ,coussin de bain de soleil, table sur pied mise en main facile ,le bateau est neuf et en bon état", 
 	category: "Bateau à moteur", 
 	price_per_day: "220", 
-	address: "Marseille", 
+	address: "Saint-Tropez", 
 	owner: user_5
 	)
 boat_5.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
@@ -142,9 +150,20 @@ boat_9 = Boat.create(
 	description: "8 personnes · 2 cabines · 4 couchages · 2 salles de bain. Nous pouvons accueillir 8 personnes la journée et 4 personnes pour les nuitées  ( 2 cabines privatisées ). Tout est prévu pour votre plaisir; masques, palmes, tubas, matériel de pêche, canoë  3 places, 2 scooters sous-marin, paddle, Gopro, livres, tv par satellite, musique (15000 morceaux, connexion Bluetooth) Hi-Fi Bose intérieur et extérieur. Éclairage sous marin pour les bains de nuit... Il ne reste plus qu'à profiter de votre séjour.", 
 	category: "Voilier", 
 	price_per_day: "345", 
-	address: "Marseille", 
-	owner: user_7)
+	address: "Saint-Tropez", 
+	owner: user_9)
 boat_9.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+puts "End of Adding Boats"
+
+file = File.open(Rails.root.join("db", "seeds", "images", "bateau10.jpg"))
+boat_10 = Boat.create(
+	title: "JEANNEAU — CAP CAMARAT 7.5.WA (2019)", 
+	description: "9 personnes · 225 chevaux · 7.5 mètres. Je vous propose de louer mon super Cap Camarat de 2019. Le bateau est équipé d'un moteur de 225 cv ce qui lui permet d'allier confort et performance sur l'eau ! Le Cap Camarat est un bateau idéal pour les sorties en mer que ce soit en famille ou entre amis ! Le bateau est équipé d'un bain de soleil avant et arrière qui vous permettons de profiter du soleil et du paysage lors de votre navigation ! Sous le bain de soleil avant se trouve une cabine avec deux couchages, idéale pour se reposer ou ranger vos affaires ! Pour votre grand plaisir, il y a une radio avec connexion Bluetooth !", 
+	category: "Bateau à moteur", 
+	price_per_day: "355", 
+	address: "Saint-Tropez", 
+	owner: user_10)
+boat_10.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 puts "End of Adding Boats"
 
 
@@ -159,5 +178,3 @@ booking_7 = Booking.create({renter: user_3, boat: boat_3 ,start_date: Date.strpt
 booking_8 = Booking.create({renter: user_2, boat: boat_2 ,start_date: Date.strptime('2021-02-08', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-12', '%Y-%m-%d') ,booking_status: "En attente"})
 booking_9 = Booking.create({renter: user_1, boat: boat_1 ,start_date: Date.strptime('2021-02-09', '%Y-%m-%d') ,end_date: Date.strptime('2021-03-13', '%Y-%m-%d') ,booking_status: "En attente"})
 puts "End of Adding Bookings"
-
-

@@ -18,7 +18,7 @@
                 <p class="category"><%= category(@boat.category) %> <%= @boat.category %></p>
               </div>
               <div>
-                <p class="card-boat-pricing pl-2">💶 <%= @boat.price_per_day %> € <span>/ jour</span></p>
+                <p class="card-boat-pricing-show pl-2">💶 <%= @boat.price_per_day %> € <span>/ jour</span></p>
               </div>
               <div class="separation info-owner">
                 <div class="identity pl-2"> <%= cl_image_tag @boat.owner.photo.key, crop: :fill, class: "avatar" %> Proposé par <%= @boat.owner.first_name %></div>
