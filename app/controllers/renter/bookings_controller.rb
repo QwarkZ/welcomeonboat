@@ -1,7 +1,7 @@
 class Renter::BookingsController < ApplicationController
   def index
     @current_user = User.find(current_user.id)
-    @bookings = Booking.all.where(renter_id: @current_user).where("start_date > ?", Time.now).sort_by { |booking| booking.start_date}
+    @bookings = Booking.all.where(renter_id: @current_user).sort_by { |booking| booking.start_date}
   end
 
   def show
