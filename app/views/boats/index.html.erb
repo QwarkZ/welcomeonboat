@@ -9,7 +9,7 @@
           <p>📍<%= boat.address %></p>
           <h2><%= category(boat.category)%><%= boat.title %></h2>
         </div>
-        <h2 class="card-boat-pricing pt-3 pb-2"> 💶<%= boat.price_per_day %> € <span>/ jour</span></h2>
+        <h2 class="card-boat-pricing pt-3 pb-2"> 💰<%= boat.price_per_day %> € <span>/ jour</span></h2>
         <%= cl_image_tag boat.owner.photo.key, crop: :fill, class: "avatar card-boat-user avatar-bordered" %>  
       </div>
     </div>

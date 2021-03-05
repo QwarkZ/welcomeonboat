@@ -5,18 +5,18 @@
     <div class="card-boat">
       <%= cl_image_tag boat.photo.key, height: 300, width: 400, crop: :fill %>
       <div class="card-boat-infos">
-        <div>
+        <div class="pb-3">
           <p>📍<%= boat.address %></p>
           <h2><%= category(boat.category)%><%= boat.title %></h2>
         </div>
-        <h2 class="card-boat-pricing pt-2"><%= boat.price_per_day %> € <span>/ jour</span></h2>
-        <%= cl_image_tag boat.owner.photo.key, crop: :fill, class: "avatar card-boat-user avatar-bordered" %>
+        <h2 class="card-boat-pricing pt-2 pb-2">💰 <%= boat.price_per_day %> € <span>/ jour</span></h2>
+        
       </div>
     </div>
   <% end %>
   </div>
   <div>
-    <%= link_to "Ajouter un bateau", class: "btn btn-add-boat mt-4 mb-4" %>
+    <%= link_to "Ajouter un bateau", new_owner_boat_path, class: "btn btn-add-boat mt-4 mb-4" %>
   </div>
 </div>
 </div>
