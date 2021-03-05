@@ -66,6 +66,10 @@ file = File.open(Rails.root.join("db", "seeds", "images", "Pierre.jpg"))
 user_13 = User.create({first_name: "Pierre", last_name: "Facq", email: "pierre@example.com", password: "azerty"})
 user_13.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
+file = File.open(Rails.root.join("db", "seeds", "images", "Segolene.jpg"))
+user_14 = User.create({first_name: "Segolene", last_name: "Facq", email: "segolene@example.com", password: "azerty"})
+user_14.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
 puts "End of Adding Users"
 
 
@@ -113,7 +117,7 @@ Motorisé avec Yamaha 40 CV est possible de conduire sans permis est maximum pou
 	category: "Bateau à moteur",
 	price_per_day: "240",
 	address: "Lerici",
-	owner: user_4
+	owner: user_5
 	)
 boat_4.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
@@ -124,7 +128,7 @@ boat_5 = Boat.create(
 	category: "Bateau à moteur",
 	price_per_day: "220",
 	address: "Saint-Tropez",
-	owner: user_5
+	owner: user_14
 	)
 boat_5.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
@@ -155,7 +159,7 @@ boat_8 = Boat.create(
 	category: "Voilier",
 	price_per_day: "305",
 	address: "Cannes",
-	owner: user_6)
+	owner: user_2)
 boat_8.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file = File.open(Rails.root.join("db", "seeds", "images", "bateau9.jpg"))
@@ -167,7 +171,7 @@ boat_9 = Boat.create(
 	address: "Saint-Tropez",
 	owner: user_9)
 boat_9.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-puts "End of Adding Boats"
+
 
 file = File.open(Rails.root.join("db", "seeds", "images", "bateau10.jpg"))
 boat_10 = Boat.create(
@@ -178,7 +182,7 @@ boat_10 = Boat.create(
 	address: "Saint-Tropez",
 	owner: user_10)
 boat_10.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-puts "End of Adding Boats"
+
 
 file = File.open(Rails.root.join("db", "seeds", "images", "bateau11.jpg"))
 boat_11 = Boat.create(
@@ -189,7 +193,7 @@ boat_11 = Boat.create(
   address: "Saint-Mandrier-Sur-Mer",
   owner: user_11)
 boat_11.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-puts "End of Adding Boats"
+
 
 file = File.open(Rails.root.join("db", "seeds", "images", "bateau12.jpg"))
 boat_12 = Boat.create(
@@ -206,7 +210,7 @@ file = File.open(Rails.root.join("db", "seeds", "images", "bateau13.jpg"))
 boat_13 = Boat.create(
   title: "PRINCESS — PRINCESS V 53. 17M (2007)",
   description: "10 invités · 3 cabines · 6 couchages 1 salle de bain. Mais c'est à l'intérieur qu'il est le plus surprenant, le moteur est situé sous la table du carré. Les poids sont mieux centrés et l'espace est libéré pour proposer 2 cabines doubles arrières et un lit breton à l'avant. Quillard avec 1,60m de tirant d'eau, il est armé pour en semi- hauturier. Grand-voile 2 ris de 2020 et génois de 2019. C'est un voilier qui démarre dans un petit souffle de vent et qui supporte le vent fort. Possibilité de dormir à bord la veille au soir. Navigation : Vers l'Ouest, les calanques de Cassis, Marseille... et vers l'Est, les Iles d'Or, St Tropez... Vous trouverez à Saint-Mandrier des commerces. Un marché se tient tous les samedis matin. En arrivant en voiture, parking gratuit à côté du port. En train, gare de Toulon, puis prendre au port une navette à passagers (ligne 28M - 20mn de traversée).",
-  category: "Voilier",
+  category: "Bateau à moteur",
   price_per_day: "1200",
   address: "Cannes",
   owner: user_12)
@@ -216,7 +220,7 @@ file = File.open(Rails.root.join("db", "seeds", "images", "bateau14.jpg"))
 boat_14 = Boat.create(
   title: "LE WAGON DE PIERRE - VERSILCRAFT — 31M (1988)",
   description: "36 invités · 4 cabines · 10 couchages · 4 salles de bain. Nous vous proposons à la location avec Capitaine Pierre, 2 marin et 1 steward notre merveilleux Versilcraft, disponible au départ de Cannes ou d'autres ports en mer Méditerranée.La capacité d'accueil à bord est de 36 personnes en journée et de 10 personnes la nuit.. C'est un voilier qui démarre dans un petit souffle de vent et qui supporte le vent fort. Possibilité de dormir à bord la veille au soir. Navigation : Vers l'Ouest, les calanques de Cassis, Marseille... et vers l'Est, les Iles d'Or, St Tropez... Vous trouverez à Saint-Mandrier des commerces. Un marché se tient tous les samedis matin. En arrivant en voiture, parking gratuit à côté du port. En train, gare de Toulon, puis prendre au port une navette à passagers (ligne 28M - 20mn de traversée).",
-  category: "Voilier",
+  category: "Bateau à moteur",
   price_per_day: "7000",
   address: "Nantes",
   owner: user_13)
@@ -229,8 +233,22 @@ boat_15 = Boat.create(
   category: "Voilier",
   price_per_day: "1400",
   address: "Nantes",
-  owner: user_4)
+  owner: user_14)
 boat_15.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file = File.open(Rails.root.join("db", "seeds", "images", "voilier1.jpg"))
+boat_16 = Boat.create(
+  title: "MOREAU — SUN ODYSSEY 40.3 (2006)",
+  description: "8 personnes · 3 cabines · 8 couchages.
+Il s'agit d'un bateau très confortable: trois cabines doubles, deux salles d'eau avec douche et wc, chauffe-eau électrique et fonctionnant avec le refroidissement du moteur. Rserves d'eau douce: 300 litres. Réserve de gazoil: 140 litres. Les voiles sont en bon état:
+La grand-voile est de 2014. Le genois sur enrouleur de 2013. Le spi, triradial est dans un état neuf.",
+  category: "Voilier",
+  price_per_day: "150",
+  address: "Kernével",
+  owner: user_8
+  )
+boat_16.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
 puts "End of Adding Boats"
 
 
