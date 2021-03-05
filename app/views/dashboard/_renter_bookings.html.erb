@@ -19,7 +19,7 @@
               (<%=(booking.end_date - booking.start_date).to_i %> jours)
             </p>
             <h4 class="card-boat-pricing pt-2"><strong><%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</strong><span> (<%=booking.boat.price_per_day%>€ / jour)</span></h4>
-
+            <p class="status <%= status(booking.booking_status) %>"> <%= icon(booking.booking_status) %> <%= booking.booking_status %></p>
           </div>
         </div>
 
@@ -46,7 +46,7 @@
                 (<%=(booking.end_date - booking.start_date).to_i %> jours)
               </p>
 
-              <h4 class="card-boat-pricing pt-2"><%=booking.boat.price_per_day%>€ <span>/ jour</span></h4>
+              <h4 class="card-boat-pricing pt-2"><strong><%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</strong><span> (<%=booking.boat.price_per_day%>€ / jour)</span></h4>
               <p class="status <%= status(booking.booking_status) %>"> <%= icon(booking.booking_status) %> <%= booking.booking_status %></p>
             </div>
           </div>
@@ -73,7 +73,7 @@
               (<%=(booking.end_date - booking.start_date).to_i %> jours)
             </p>
 
-            <h4 class="card-boat-pricing pt-2"><%=booking.boat.price_per_day%>€ <span>/ jour</span></h4>
+            <h4 class="card-boat-pricing pt-2"><strong><%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</strong><span> (<%=booking.boat.price_per_day%>€ / jour)</span></h4>
             <p class="status <%= status(booking.booking_status) %>"> <%= icon(booking.booking_status) %> <%= booking.booking_status %></p>
           </div>
         </div>
