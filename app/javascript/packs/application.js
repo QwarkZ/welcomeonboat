@@ -54,6 +54,24 @@ document.addEventListener('turbolinks:load', () => {
       avatar.nextElementSibling.style.display = "none";
     });
   });
+
+  const dateInputChange = () => {
+    const dateInput = document.getElementById("firstRangeInput");
+    console.log(dateInput);
+    dateInput.addEventListener("change", () => {
+      const endDate = document.getElementById("secondRangeInput");
+      const milliSecDuration = Date.parse(endDate.value, 10) - Date.parse(dateInput.value, 10);
+      const daysDuration = milliSecDuration / 1000 / 60 / 60 / 24;
+      const pricePerDay = document.getElementById("price-unit");
+      const bookButton = document.getElementById("book-btn");
+      const totalPrice = parseInt(pricePerDay.innerText) * daysDuration;
+      bookButton.value = `Je réserve ce bateau pour ${totalPrice} €`;
+      bookButton.innerText = `Je réserve ce bateau pour ${totalPrice} €`;
+    });
+  };
+
+  dateInputChange();
+
 });
 
 
