@@ -27,7 +27,7 @@ class Owner::BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.booking_status = @status
     @booking.save
-    redirect_to owner_bookings_path
+    redirect_to dashboard_index_path
   end
 
   def destroy

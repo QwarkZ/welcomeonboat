@@ -1,9 +1,9 @@
 <div class="container" id="dashboard">
   <div class="tabs">
-    <button class="tab relative" id="dashboard-btn-renter">
+    <button class="tab relative active" id="dashboard-btn-renter">
       Mes locations
     </button>
-    <button class="tab relative active" id="dashboard-btn-owner">
+    <button class="tab relative" id="dashboard-btn-owner">
       <% if pending_count[:owner] != 0 %>
         <i class="notif"><%= pending_count[:owner] %></i>
       <% end %>
