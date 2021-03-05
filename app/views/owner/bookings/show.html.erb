@@ -7,6 +7,7 @@
       <%= cl_image_tag @booking.boat.photo.key, height: 400, width: 500, crop: :fill %>
     </div>
     <div class="ml-4">
+      <h3>Demande de réservation de <%= @booking.renter.first_name %></h3>
       <h3><%=@booking.boat.title%></h3>
       <h4><%=@booking.boat.category%> - <%=@booking.boat.address%></h4>
       <p class="dates">Du <span class="from"><%=@booking.start_date.strftime("%d/%m/%Y")%></span> au <span class="to "><%=@booking.end_date.strftime("%d/%m/%Y")%></span></p>
