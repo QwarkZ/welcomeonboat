@@ -1,6 +1,7 @@
 <div class="container bookings dashboard-container active" id="dashboard-container-owner">
-
-  <h1>Demandes de réservation</h1>
+  <% if @pending_people_rentings.blank? %>
+  <h1 class="titre-page-dashboard">Nous n'avez pas encore de réservation.</h1>
+  <% end %>
   <div class="pending-bookings">
   <% if @pending_people_rentings.length != 0 %>
       <h2>En attente</h2>
