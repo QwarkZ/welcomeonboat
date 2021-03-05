@@ -8,8 +8,11 @@ class Owner::BoatsController < ApplicationController
     @boat = Boat.new(boat_params)
     @user = User.find(current_user.id)
     @boat.owner = @user
-    @boat.save
-    redirect_to boat_path(@boat)
+    if @boat.save
+      redirect_to boat_path(@boat)
+    else
+      render :new
+    end
   end
 
   private

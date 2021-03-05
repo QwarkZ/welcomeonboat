@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.boat_id = params[:boat_id]
     @booking.renter = current_user
     @booking.save
-    redirect_to renter_bookings_path(@booking)
+    redirect_to dashboard_index_path(@booking)
   end
 
   def edit
