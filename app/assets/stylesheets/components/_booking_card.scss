@@ -1,31 +1,77 @@
-.booking.card {
+.booking-card {
   margin:16px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  padding:0 16px 0 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   background-color:white;
-  border:1px solid  rgba(0,0,0,0.7);
   border-radius:5px;
   display:flex;
-  // * {
-  //   width:fit-content;
-  //   margin:4px 0;
-  // }
+  justify-content:space-between;
+  position:relative;
+}
+
+.booking-avatar {
+  position:absolute;
+  top:8px;
+  left:0;
+}
+
+.booking-avatar .avatar {
+  border:1px solid white;
+}
+
+.avatar-label {
+  background-color:white;
+  padding:4px;
+  display:none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.7);
 }
 
 .owner {
   font-size:1.25em;
 }
 
-.price {
-  color:$red;
-  font-size:1.5em;
-  font-weight:bold;
+.booking-info {
+  margin:16px 16px 16px 24px;
+  flex-grow:2;
+  color:rgba(0, 0, 0, 0.9);
 }
 
-.dates {
-  font-size:1.25em;
-  color:$blue;
+.status {
+  margin:0;
+  position:absolute;
+  bottom:0;
+  right:0;
 }
 
-.booking.card.resa-img {
-display: grid;
+.price-renter {
+  padding-left: 20px;
+}
+
+.card-boat-pricing {
+  position:absolute;
+  bottom:0;
+  margin-bottom:0;
+}
+
+.other-bookings .booking-card {
+  opacity:0.5;
+}
+
+
+@media (max-width: 800px) {
+  .booking-card {
+    flex-direction:column;
+    padding:0;
+  }
+
+  .booking-card .booking-img > img:first-child {
+    width:100%;
+    height:auto;
+  }
+
+  .booking-info {
+    margin:12px;
+    min-height:170px;
+    line-height:1.25;
+  }
 }

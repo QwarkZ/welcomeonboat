@@ -29,6 +29,7 @@ import "bootstrap";
 
 document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
+
   const boardButtons = document.querySelectorAll("#dashboard button.tab");
   const boardContainers = document.querySelectorAll(".dashboard-container");
   boardButtons.forEach((button) => {
@@ -40,6 +41,17 @@ document.addEventListener('turbolinks:load', () => {
       const boardId = "dashboard-container-" + ref;
       const board = document.getElementById(boardId);
       board.style.display = "block";
+    });
+  });
+
+  const bookingAvatars = document.querySelectorAll(".avatar");
+  bookingAvatars.forEach((avatar) => {
+    avatar.addEventListener('mouseenter', () => {
+      console.log(avatar.nextElementSibling);
+      avatar.nextElementSibling.style.display = "inline-block";
+    });
+    avatar.addEventListener('mouseleave', () => {
+      avatar.nextElementSibling.style.display = "none";
     });
   });
 });
