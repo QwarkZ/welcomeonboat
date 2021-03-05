@@ -16,6 +16,9 @@
   <% end %>
   </div>
   <div>
+    <% if @my_boats.blank? %>
+    <p>Vous ne proposez pas encore de bateau à la location.</p>
+    <% end %>
     <%= link_to "Ajouter un bateau", new_owner_boat_path, class: "btn btn-add-boat mt-4 mb-4" %>
   </div>
 </div>
