@@ -5,7 +5,7 @@
             <div class="img-boat" style="background-image: url(<%= cl_image_path @boat.photo.key, crop: :scale %>);">
             </div>
             <p><%= @boat.description.truncate(800) %></p>
-          </div>
+            </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="brick2 pt-4">
@@ -17,20 +17,23 @@
                 <p>📍<%= @boat.address %></p>
                 <p class="category"><%= category(@boat.category) %> <%= @boat.category %></p>
               </div>
+              <div>
+                <p class="card-boat-pricing pl-2">💶 <%= @boat.price_per_day %> € <span>/ jour</span></p>
+              </div>
               <div class="separation info-owner">
-                <div class="identity pl-2"> <%= cl_image_tag @boat.owner.photo.key, crop: :fill, class: "avatar" %> Proposé par <%= @boat.owner.first_name %> <%= @boat.owner.last_name %></div>
-                <div class="comment pl-2">Et répond en moins <%= rand(1..5) %>h</div>
+                <div class="identity pl-2"> <%= cl_image_tag @boat.owner.photo.key, crop: :fill, class: "avatar" %> Proposé par <%= @boat.owner.first_name %></div>
+                <div class="comment pl-2">Répond en moins de <%= rand(1..5) %>h</div>
               </div>
             <div class="formulaire-reservation separation">
               <div class="container mt-4">
                 <%= render "bookings/form", booking: @booking, boat: @boat  %>
+                <p class="ml-1">🔥 <%= rand(1..1500) %> personnes ont vu ce bateau cette semaine.</p>
               </div>
               <div class="mt-2">
-                <p>🔥 <%= rand(1..1500) %> personnes ont vu ce <%= @boat.category %> cette semaine.</p>
               </div>
               <div class="d-flex justify-content-end">
 
-              <%= link_to "Continuer mes recherches", boats_path, class: "btn btn-homepage-signin" %>
+              <%= link_to "Continuer mes recherches", boats_path, class: "btn btn-homepage-signin mt-4 mb-4" %>
               </div>
             </div>  
         </div>

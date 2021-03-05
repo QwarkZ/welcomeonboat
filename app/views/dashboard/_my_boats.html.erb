@@ -1,5 +1,5 @@
-<div class="container dashboard-container" id="dashboard-container-boats">
-  <p>Mes bateaux</p>
+<div class="container">
+  <div class="cards">
   <% @my_boats.each do |boat| %>
     <div class="card-boat">
       <%= cl_image_tag boat.photo.key, height: 300, width: 400, crop: :fill %>
@@ -13,4 +13,8 @@
       </div>
     </div>
   <% end %>
+  </div>
+  <div>
+    <%= link_to "Ajouter un bateau", class: "btn btn-add-boat mt-4 mb-4" %>
+  </div>
 </div>
