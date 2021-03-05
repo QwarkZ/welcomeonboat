@@ -44,7 +44,7 @@ document.addEventListener('turbolinks:load', () => {
     });
   });
 
-  const bookingAvatars = document.querySelectorAll(".avatar");
+  const bookingAvatars = document.querySelectorAll(".booking-card .avatar");
   bookingAvatars.forEach((avatar) => {
     avatar.addEventListener('mouseenter', () => {
       console.log(avatar.nextElementSibling);
