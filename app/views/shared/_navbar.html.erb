@@ -16,8 +16,8 @@
         <li class="nav-item active relative">
           <%= link_to dashboard_index_path, class: "nav-link" do %>
             <span>📬 Mon tableau de bord</span>
-            <% if pending_count[:all] != 0 %>
-              <i class="notif"><%= pending_count[:all] %></i>
+            <% if pending_count[:owner] != 0 %>
+              <i class="notif"><%= pending_count[:owner] %></i>
             <% end %>
           <% end %>
         </li>
