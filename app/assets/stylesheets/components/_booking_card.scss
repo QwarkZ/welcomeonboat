@@ -41,6 +41,9 @@
   position:absolute;
   bottom:0;
   right:0;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .price-renter {
@@ -49,14 +52,19 @@
 
 .card-boat-infos {
   color:#474747;
-  font-size:1.5em;
+  font-size:1em;
+  font-weight: bold;
 }
 
 h4.card-boat-infos {
-  font-size:1.25em!important;
+  font-size:0.9em!important;
   margin-bottom:16px;
+  font-weight: lighter!important;
 }
 
+.resa {
+  margin-bottom: 0px;
+}
 .pin {
   font-size:0.75em;
 }
@@ -74,11 +82,11 @@ h4.card-boat-infos {
 }
 
 .card-boat-pricing > strong {
-  font-size:1.125em;
+  font-size:0.75em;
 }
 
 .card-boat-pricing > span {
-  font-size:0.75em;
+  font-size:0.6em;
   margin-left:8px
 }
 

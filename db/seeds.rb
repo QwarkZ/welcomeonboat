@@ -58,16 +58,16 @@ file = File.open(Rails.root.join("db", "seeds", "images", "Manu.jpg"))
 user_11 = User.create({first_name: "Manu", last_name: "Macron", email: "manu@example.com", password: "azerty"})
 user_11.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file = File.open(Rails.root.join("db", "seeds", "images", "Brigitte.jpg"))
-user_12 = User.create({first_name: "Brigitte", last_name: "Macron", email: "brigitte@example.com", password: "azerty"})
+file = File.open(Rails.root.join("db", "seeds", "images", "Nikos.jpg"))
+user_12 = User.create({first_name: "Nikos", last_name: "Petit", email: "nikos@example.com", password: "azerty"})
 user_12.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file = File.open(Rails.root.join("db", "seeds", "images", "Pierre.jpg"))
 user_13 = User.create({first_name: "Pierre", last_name: "Facq", email: "pierre@example.com", password: "azerty"})
 user_13.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-file = File.open(Rails.root.join("db", "seeds", "images", "Segolene.jpg"))
-user_14 = User.create({first_name: "Segolene", last_name: "Facq", email: "segolene@example.com", password: "azerty"})
+file = File.open(Rails.root.join("db", "seeds", "images", "Cyril.jpg"))
+user_14 = User.create({first_name: "Cyril", last_name: "Lygnac", email: "cyril@example.com", password: "azerty"})
 user_14.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 puts "End of Adding Users"
@@ -253,11 +253,11 @@ puts "End of Adding Boats"
 
 
 puts "Adding Bookings"
-booking_1 = Booking.create({renter: user_1, boat: boat_9 ,start_date: Date.strptime('2020-09-01', '%Y-%m-%d') ,end_date: Date.strptime('2020-09-02', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_2 = Booking.create({renter: user_2, boat: boat_8 ,start_date: Date.strptime('2020-08-15', '%Y-%m-%d') ,end_date: Date.strptime('2020-08-16', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_5 = Booking.create({renter: user_1, boat: boat_5 ,start_date: Date.strptime('2020-08-05', '%Y-%m-%d') ,end_date: Date.strptime('2020-08-09', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_6 = Booking.create({renter: user_2, boat: boat_4 ,start_date: Date.strptime('2020-05-06', '%Y-%m-%d') ,end_date: Date.strptime('2020-05-10', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_7 = Booking.create({renter: user_3, boat: boat_3 ,start_date: Date.strptime('2019-07-07', '%Y-%m-%d') ,end_date: Date.strptime('2019-07-08', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_8 = Booking.create({renter: user_2, boat: boat_2 ,start_date: Date.strptime('2018-08-08', '%Y-%m-%d') ,end_date: Date.strptime('2018-08-10', '%Y-%m-%d') ,booking_status: "En attente"})
-booking_9 = Booking.create({renter: user_1, boat: boat_1 ,start_date: Date.strptime('2017-06-09', '%Y-%m-%d') ,end_date: Date.strptime('2017-06-10', '%Y-%m-%d') ,booking_status: "En attente"})
+booking_1 = Booking.create({renter: user_1, boat: boat_9 ,start_date: Date.strptime('2020-09-01', '%Y-%m-%d') ,end_date: Date.strptime('2020-09-02', '%Y-%m-%d') ,booking_status: "Validée"})
+booking_2 = Booking.create({renter: user_2, boat: boat_8 ,start_date: Date.strptime('2020-08-15', '%Y-%m-%d') ,end_date: Date.strptime('2020-08-16', '%Y-%m-%d') ,booking_status: "Validée"})
+booking_5 = Booking.create({renter: user_1, boat: boat_5 ,start_date: Date.strptime('2020-08-05', '%Y-%m-%d') ,end_date: Date.strptime('2020-08-09', '%Y-%m-%d') ,booking_status: "Validée"})
+booking_6 = Booking.create({renter: user_2, boat: boat_4 ,start_date: Date.strptime('2020-05-06', '%Y-%m-%d') ,end_date: Date.strptime('2020-05-10', '%Y-%m-%d') ,booking_status: "Validée"})
+booking_7 = Booking.create({renter: user_3, boat: boat_3 ,start_date: Date.strptime('2019-07-07', '%Y-%m-%d') ,end_date: Date.strptime('2019-07-08', '%Y-%m-%d') ,booking_status: "Validée"})
+booking_8 = Booking.create({renter: user_2, boat: boat_2 ,start_date: Date.strptime('2018-08-08', '%Y-%m-%d') ,end_date: Date.strptime('2018-08-10', '%Y-%m-%d') ,booking_status: "Refusée"})
+booking_9 = Booking.create({renter: user_1, boat: boat_1 ,start_date: Date.strptime('2017-06-09', '%Y-%m-%d') ,end_date: Date.strptime('2017-06-10', '%Y-%m-%d') ,booking_status: "Validée"})
 puts "End of Adding Bookings"

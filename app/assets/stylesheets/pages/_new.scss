@@ -1,6 +1,6 @@
 form#new_boat {
   height:max-content;
-  padding:2rem;
+  padding:0.5rem;
   label {
     width:20%;
   }
@@ -14,5 +14,32 @@ form#new_boat {
     width:33%;
     margin:10px auto;
   }
+
+  #book-btn {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #yellow;
+  transition: background 0.3s ease;
+  margin-top: 50px;
+  text-decoration: none;
+  }
 }
 
+
+.title-new-boat {
+  color: $blue;
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.form-control {
+  border: none!important;
+  background: #f5f5f5;
+}
+
+.form-control-file {
+ display: initial;
+ margin-left: 2px;
+}

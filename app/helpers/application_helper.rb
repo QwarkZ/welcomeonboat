@@ -12,7 +12,6 @@ module ApplicationHelper
   def icon(booking)
     if booking == "En attente"
       "⏰"
-
     elsif booking == "Validée"
       "✅"
     else
@@ -27,6 +26,5 @@ module ApplicationHelper
      	"🛥"
     end
 	end
-
 end
 

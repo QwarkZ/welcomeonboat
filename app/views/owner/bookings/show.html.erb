@@ -5,18 +5,24 @@
       <%= cl_image_tag @booking.boat.photo.key, height: 400, width: 500, crop: :fill %>
     </div>
     <div class="ml-4">
-      <h4 class="pb-4">Demande de réservation de <%= @booking.renter.first_name %>     <%= cl_image_tag @booking.renter.photo.key, crop: :fill, class: "avatar avatar-bordered" %>
-</h4>
-      <h4 class=" text-dark"><%=@booking.boat.title%></h4>
-      <h4 class=" text-dark"><%=@booking.boat.category%> - <%=@booking.boat.address%></h4>
-      <p class="dates">Du <span class="from"><%=@booking.start_date.strftime("%d/%m/%Y")%></span> au <span class="to "><%=@booking.end_date.strftime("%d/%m/%Y")%></span></p>
+      <h4 class="pb-2 resa-validation mt-2">Demande de réservation de <%= @booking.renter.first_name %> <%= @booking.renter.last_name %>  <%= cl_image_tag @booking.renter.photo.key, crop: :fill, class: "avatar avatar-bordered" %>
+      </h4>
+      <h6 class="card-boat-infos text-dark mt-4"><%= category(@booking.boat.category) %><%=@booking.boat.title%></h6>
+      <h4 class="card-boat-infos mb-4">📍 <%=@booking.boat.address%></h4>
+      
+      <p class="dates">🗓 <%= @booking.renter.first_name %> <%= @booking.renter.last_name %> souhaite louer votre bateau du <span class="from"><%=@booking.start_date.strftime("%d/%m/%Y")%></span> au <span class="to "><%=@booking.end_date.strftime("%d/%m/%Y")%></span></p>
+      <h4 class="card-boat-pricing-booking">💰 <strong><%= ((@booking.end_date - @booking.start_date).to_i) * @booking.boat.price_per_day %>€</strong><span> (<%=@booking.boat.price_per_day%>€ x <%=(@booking.end_date - @booking.start_date).to_i %> jours)</span></h4>
 
-      <h4 class="card-boat-pricing pt-2 mb-3"><strong><%= ((@booking.end_date - @booking.start_date).to_i) * @booking.boat.price_per_day %>€</strong><span> (<%=@booking.boat.price_per_day%>€ / jour)</span></h4>
-
-      <div class="booking-options bottom-right d-flex">
-        <p class="my-0 mr-5"><%=@booking.booking_status%></p>
+      <div class="booking-options-title mt-5">
         <% if @booking.booking_status == "En attente" %>
-          <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => @booking.id}), method: :patch, :class => "booking-option validated" %> <%= link_to "Refuser", owner_booking_path({:booking_status => "Refusée", :id => @booking.id}), method: :patch, :class => "booking-option refused" %>
+        <h5>Souhaitez-vous accepter la demande de réservation ?</h5>
+        <% else %>
+        <h5>Souhaitez-vous annuler la demande de réservation ?</h5>
+        <% end %>
+      <div class="booking-options">
+        <% if @booking.booking_status == "En attente" %>
+          <%= link_to "Valider", owner_booking_path({:booking_status => "Validée", :id => @booking.id}), method: :patch, :class => "booking-option validated" %> 
+          <%= link_to "Refuser", owner_booking_path({:booking_status => "Refusée", :id => @booking.id}), method: :patch, :class => "booking-option refused" %>
         <% elsif @booking.booking_status == "Validée" %>
           <%= link_to "Annuler la réservation", owner_booking_path({:booking_status => "Refusée", :id => @booking.id}), method: :patch, :class => "booking-option refused" %>
         <% else %>
@@ -24,8 +30,7 @@
         <% end %>
       </div>
       </div>
+      </div>
     </div>
   </div>
-
-
 </div>
