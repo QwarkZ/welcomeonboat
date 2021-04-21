@@ -1,17 +1,22 @@
-.bookings {
-  color:#0E0000;
-  h3 {
-    font-size:1.25rem;
+.rubrique {
+  h6 {
+    font-size:1.3rem;
   }
+
   h4 {
     font-size:1.125rem;
   }
 }
 
+.resa-validation
+ {
+  font-size:1.125rem;
+ }
+
 .booking-options {
   a.booking-option, p {
-  margin:0 16px;
-  padding:4px 8px;
+  margin: 0px 10px;
+  padding: 8px 24px;
   border-radius:4px;
   border:1px solid transparent;
   }
@@ -35,5 +40,41 @@
       border:1px solid $red;
     }
   }
+}
+
+.card-boat-pricing-booking {
+  bottom:0;
+  margin-bottom:0;
+  font-size: 1em;
+}
+
+.card-boat-pricing-booking > strong {
+  font-size:1.125em;
+}
+
+.card-boat-pricing-booking > span {
+  font-size:0.75em;
+  margin-left:8px
+}
+
+.booking-options-title {
+  background-color: #bdc7c9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  h5 {
+    font-size:1.1rem;
+    margin-bottom: 10px;
+  }
+}
+.booking-options {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 10px;
 }
 

@@ -1,7 +1,7 @@
 <div class="container bookings dashboard-container active" id="dashboard-container-renter">
-  <div class="pending-bookings">
+  <div class="pending-bookings mt-4">
     <% if @my_pending_bookings.length != 0 %>
-      <h2>En attente</h2>
+      <h2>⏰ En attente</h2>
     <% end %>
     <% @my_pending_bookings.each do |booking| %>
 
@@ -12,13 +12,14 @@
           </div>
           <div class="booking-info relative">
             <h3 class="card-boat-infos"><%=booking.boat.title%></h3>
-            <h4 class="card-boat-infos"><%=booking.boat.category%> - 📍<%=booking.boat.address%></h4>
-            <p class="dates">Du
+            <h4 class="card-boat-infos">📍 <%=booking.boat.address%></h4>
+            <p class="resa">Vous avez fait une demande de location pour la période suivante :</p>
+            <p class="dates">🗓 du
               <span class="from"><%=booking.start_date.strftime("%d/%m/%y")%></span> au
               <span class="to "><%=booking.end_date.strftime("%d/%m/%y")%></span>
               (<%=(booking.end_date - booking.start_date).to_i %> jours)
             </p>
-            <h4 class="card-boat-pricing pt-2"><strong><%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</strong><span> (<%=booking.boat.price_per_day%>€ / jour)</span></h4>
+            <h4 class="card-boat-pricing pt-2"><strong>💰 <%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</strong><span> (<%=booking.boat.price_per_day%>€ / jour)</span></h4>
             <p class="status <%= status(booking.booking_status) %>"> <%= icon(booking.booking_status) %> <%= booking.booking_status %></p>
           </div>
         </div>
@@ -26,9 +27,9 @@
     <% end %>
   </div>
 
-  <div class="confirmed-bookings">
+  <div class="confirmed-bookings mt-5">
     <% if @my_future_bookings.length != 0 %>
-      <h2>Confirmées</h2>
+      <h2>✅ Confirmées</h2>
     <% end %>
       <% @my_future_bookings.each do |booking| %>
         <%= link_to renter_booking_path(booking) do %>
@@ -39,14 +40,15 @@
             </div>
             <div class="booking-info relative">
               <h3 class="card-boat-infos"><%=booking.boat.title%></h3>
-              <h4 class="card-boat-infos"><%=booking.boat.category%> - 📍<%=booking.boat.address%></h4>
-              <p class="dates">Du
+              <h4 class="card-boat-infos">📍 <%=booking.boat.address%></h4>
+              <p class="resa">Vous avez fait une demande de location pour la période suivante :</p>
+              <p class="dates">🗓 du
                 <span class="from"><%=booking.start_date.strftime("%d/%m/%y")%></span> au
                 <span class="to "><%=booking.end_date.strftime("%d/%m/%y")%></span>
                 (<%=(booking.end_date - booking.start_date).to_i %> jours)
               </p>
 
-              <h4 class="card-boat-pricing pt-2"><strong><%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</strong><span> (<%=booking.boat.price_per_day%>€ / jour)</span></h4>
+              <h4 class="card-boat-pricing pt-2"><strong>💰 <%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</strong><span> (<%=booking.boat.price_per_day%>€ / jour)</span></h4>
               <p class="status <%= status(booking.booking_status) %>"> <%= icon(booking.booking_status) %> <%= booking.booking_status %></p>
             </div>
           </div>
@@ -56,7 +58,7 @@
 
   <div class="other-bookings">
     <% if @my_other_bookings.length != 0 %>
-      <h2>Passées</h2>
+      <h2 class="mt-5">☑️ Passées</h2>
     <% end %>
     <% @my_other_bookings.each do |booking| %>
         <div class="booking-card relative">
@@ -66,14 +68,15 @@
           </div>
           <div class="booking-info relative">
             <h3 class="card-boat-infos"><%=booking.boat.title%></h3>
-            <h4 class="card-boat-infos"><%=booking.boat.category%> - 📍<%=booking.boat.address%></h4>
-            <p class="dates">Du
+            <h4 class="card-boat-infos">📍 <%=booking.boat.address%></h4>
+            <p class="resa">Vous avez fait une demande de location pour la période suivante :</p>
+            <p class="dates">🗓 du
               <span class="from"><%=booking.start_date.strftime("%d/%m/%y")%></span> au
               <span class="to "><%=booking.end_date.strftime("%d/%m/%y")%></span>
               (<%=(booking.end_date - booking.start_date).to_i %> jours)
             </p>
 
-            <h4 class="card-boat-pricing pt-2"><strong><%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</strong><span> (<%=booking.boat.price_per_day%>€ / jour)</span></h4>
+            <h4 class="card-boat-pricing pt-2"><strong>💰 <%= ((booking.end_date - booking.start_date).to_i) * booking.boat.price_per_day %>€</strong><span> (<%=booking.boat.price_per_day%>€ / jour)</span></h4>
             <p class="status <%= status(booking.booking_status) %>"> <%= icon(booking.booking_status) %> <%= booking.booking_status %></p>
           </div>
         </div>
